@@ -1,0 +1,117 @@
+body {
+    background: url('/media/estore_bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Lato';
+}
+
+/* Main background color for the navbar */
+.navbar {
+    background-color: #383838; /* Dark background */
+}
+
+/* Logo and text color on the navbar */
+.navbar-brand {
+    color: white; /* Neon green for logo */
+    margin-left: 1.5em;
+}
+
+.navbar-brand:hover {
+    color: #A0A0A0;
+}
+
+/* Link color in the navbar */
+.navbar-nav .nav-link {
+    color: white; /* Light gray text for links */
+}
+
+/* Hover effect for the links */
+.navbar-nav .nav-link:hover {
+    color: #A0A0A0; /* Bright blue when hovered */
+}
+
+/* Background color for dropdown menus */
+.dropdown-menu {
+    background-color: #808080; /* Dark gray for dropdown */
+    border: none;
+}
+
+/* Text color inside dropdown items */
+.dropdown-item {
+    color: white; /* Light gray text for dropdown items */
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover {
+    background-color: #A0A0A0; /* Neon green background on hover */
+    color: #121212; /* Dark text on hover */
+}
+
+/* Search button style */
+.btn-outline-success {
+    color: #00FF33; /* Neon green for search button text */
+    border-color: #00FF33; /* Neon green border for the button */
+}
+
+/* Hover effect for the search button */
+.btn-outline-success:hover {
+    background-color: #00CC33; /* Neon green background on hover */
+    color: #121212; /* Dark text on hover */
+}
+
+/* Link color for the right-side links */
+.navbar-nav.ms-auto .nav-link {
+    color: white; /* Light gray text for right-side links */
+    margin-right: 1.5em;
+}
+
+/* Hover effect for right-side links */
+.navbar-nav.ms-auto .nav-link:hover {
+    color: #A0A0A0; /* Bright blue on hover */
+}
+
+.container-fluid {
+    --bs-gutter-x: 0 !important;
+}
+
+.center-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: To add background */
+    border-radius: 10px; /* Optional: Rounded corners */
+    color: #fff; /* Optional: White text color */
+    max-width: 90%; /* Optional: To avoid it going off-screen */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow */
+}
+
+.center-block h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.center-block a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Media query for responsive navbar */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        margin-top: 15px;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 5px 0;
+    }
+}
+
+  
