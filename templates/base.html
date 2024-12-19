@@ -111,6 +111,60 @@
     {% block content %}
     {% endblock %}
 
+    <footer class="footer mt-auto py-4 bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <!-- Logo/Brand Section -->
+                <div class="col-12 col-md-3 mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start justify-content-center text-center text-md-start">
+                    <h5>Epic Merch</h5>
+                    <p>Your source for the best gaming equipment.</p>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="col-12 col-md-3 mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start justify-content-center text-center text-md-start">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">Home</a></li>
+                        <li><a href="#" class="text-light">Products</a></li>
+                        {%if user.is_authenticated %}
+                        <li><a href="#" class="text-light">{{user.username}}</a></li>
+                        <li><a href="#" class="text-light">Logout</a></li>
+                        {% else %}
+                        <li><a href="#" class="text-light">Login</a></li>
+                        <li><a href="#" class="text-light">Register</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="col-12 col-md-3 mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start justify-content-center text-center text-md-start">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/" class="text-light"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://x.com/" class="text-light"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://www.instagram.com/" class="text-light"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-12 col-md-3 d-flex flex-column align-items-center align-items-md-start justify-content-center text-center text-md-start">
+                    <h5>Contact Us</h5>
+                    <p>Email: info@gg.com</p>
+                    <p>Phone: +123 456 789</p>
+                </div>
+            </div>
+
+            <hr class="bg-light m-0">
+
+            <!-- Copyright Row -->
+            <div class="row">
+                <div class="col text-center mt-2">
+                    <p>&copy; 2024 Epic Merch - All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     {% block postloadjs %}
     {% endblock %}
     
