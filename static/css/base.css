@@ -6,6 +6,25 @@ body {
     font-family: 'Lato';
 }
 
+/* Ensure dropdowns-search aligns to the left and profile-cart aligns to the right */
+/* Dropdowns and search bar alignment */
+.dropdowns-search {
+    width: 80%; /* Reduce width to bring closer to the center */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Even spacing between dropdowns and search */
+    gap: 1em; /* Adjust spacing between dropdowns and search bar */
+    margin-right: 2em; /* Fine-tune positioning */
+}
+
+.profile-cart {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align to the right */
+    flex: 1; /* Allow space to expand */
+    margin-right: 1.5em;
+}
+
 /* Main background color for the navbar */
 .navbar {
     background-color: #383838; /* Dark background */
@@ -99,18 +118,19 @@ body {
     color: white;
 }
 
-/* Media query for responsive navbar */
+/* Responsive layout for mobile devices */
 @media (max-width: 768px) {
-    .navbar-collapse {
+    .dropdowns-search,
+    .profile-cart {
+        justify-content: center; /* Center both sections on mobile */
+        margin: 0; /* Remove extra margins */
         text-align: center;
+        flex-direction: column; /* Stack items vertically */
     }
 
-    .navbar-nav {
-        margin-top: 15px;
-    }
-
-    .navbar-nav .nav-link {
-        margin: 5px 0;
+    .dropdowns-search {
+        width: 100%; /* Expand to full width on mobile */
+        margin-bottom: 1em; /* Add spacing between blocks */
     }
 }
 
