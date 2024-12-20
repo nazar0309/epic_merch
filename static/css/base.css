@@ -1,7 +1,6 @@
 body {
     background: url('/media/estore_bg.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
 }
@@ -117,6 +116,39 @@ body {
     text-decoration: none;
     color: white;
 }
+/* Загальні стилі */
+html, body {
+    height: 100%; /* Забезпечує, що сторінка займає всю висоту вікна */
+    margin: 0; /* Прибирає зайві відступи */
+    display: flex;
+    flex-direction: column; /* Робимо сторінку вертикальною колонкою */
+}
+
+/* Основний контент розтягується на всю доступну висоту */
+main {
+    min-height: 100vh;
+    flex: 1; /* Контент займає доступний простір */
+    padding-bottom: 2em; /* Додаємо відступ знизу для футера */
+}
+
+/* Футер */
+.footer {
+    background-color: #383838 !important; /* Тло футера */
+    color: white; /* Текст футера */
+    text-align: center;
+    padding: 1em 0; /* Відступи для вмісту футера */
+    margin-top: auto; /* Футер знаходиться внизу сторінки */
+}
+
+.footer a {
+    color: #A0A0A0;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
 
 /* Responsive layout for mobile devices */
 @media (max-width: 768px) {
@@ -131,6 +163,10 @@ body {
     .dropdowns-search {
         width: 100%; /* Expand to full width on mobile */
         margin-bottom: 1em; /* Add spacing between blocks */
+    }
+
+    .footer {
+        margin-top: 1em;
     }
 }
 
