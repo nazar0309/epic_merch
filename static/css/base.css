@@ -118,7 +118,6 @@ body {
 }
 /* Загальні стилі */
 html, body {
-    height: 100%; /* Забезпечує, що сторінка займає всю висоту вікна */
     margin: 0; /* Прибирає зайві відступи */
     display: flex;
     flex-direction: column; /* Робимо сторінку вертикальною колонкою */
@@ -148,7 +147,52 @@ main {
 .footer a:hover {
     text-decoration: underline;
 }
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensures all cards are the same height */
+    background-color: #969696; /* Light gray background for cards */
+    border: 1px solid #e0e0e0; /* Soft border for separation */
+    border-radius: 0.5rem; /* Rounded corners for modern look */
+    box-shadow: 0 4px 6px white; /* Subtle shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+}
 
+.card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.card-img-top {
+    width: 100%;             
+    height: 250px;         
+    object-fit: contain;     /* Ensure the entire image fits within the container */
+    background-color: #969696; /* Light background for empty areas */
+    border-radius: 0.5rem 0.5rem 0 0; /* Match card corners at the top */
+    overflow: hidden;        /* Ensures no part of the image exceeds the boundaries */
+}
+
+.card-main {
+    background-color: #808080;
+    padding: 1em;
+}
+
+.card-footer {
+    padding: 0.75em 1em;
+    background-color: white; /* Same as the card body */
+    border-top: 1px solid #e0e0e0; /* Soft border for separation */
+    color: #fff; /* Optional: White text for better contrast */
+}
+
+.card p, .card small {
+    color: #555; /* Darker text for readability */
+}
+
+.product-container .col {
+    display: flex;
+    flex-direction: column;
+}
 
 /* Responsive layout for mobile devices */
 @media (max-width: 768px) {
@@ -167,6 +211,9 @@ main {
 
     .footer {
         margin-top: 1em;
+    }
+    .card {
+        margin-bottom: 1em; /* Add spacing between cards on smaller screens */
     }
 }
 
