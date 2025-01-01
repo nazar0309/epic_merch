@@ -1,4 +1,10 @@
 {% load static %}
+{% url 'home' as home_url %}
+{% url 'products' as home_url %}
+{% url 'user_profile' as profile_url%}
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
 
 <!doctype html>
 <html lang="en">
@@ -40,7 +46,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <!-- Logo on the Left -->
-                <a class="navbar-brand" href="#">Epic Merch</a>
+                <a class="navbar-brand" href="{% url 'home' %}">Epic Merch</a>
                 
                 <!-- Navbar Toggler for mobile -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
