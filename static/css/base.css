@@ -26,6 +26,8 @@ body {
 
 /* Main background color for the navbar */
 .navbar {
+    width: 100%; /* Ensures the navbar spans the full width of the screen */
+    position: relative; /* Ensure it is positioned naturally (not fixed) */
     background-color: #383838; /* Dark background */
 }
 
@@ -125,9 +127,10 @@ html, body {
 
 /* Основний контент розтягується на всю доступну висоту */
 main {
-    min-height: 100vh;
-    flex: 1; /* Контент займає доступний простір */
-    padding-bottom: 2em; /* Додаємо відступ знизу для футера */
+    min-height: 100vh; /* Ensure the content takes full height */
+    flex: 1;
+    margin-top: 70px; /* Adjust this value to the height of your header */
+    padding-bottom: 2em; /* Optional: adds padding at the bottom for footer spacing */
 }
 
 /* Футер */
@@ -192,6 +195,10 @@ main {
 .product-container .col {
     display: flex;
     flex-direction: column;
+}
+
+.product-details-container {
+    margin-top: 1.5em;
 }
 
 /* Responsive layout for mobile devices */
