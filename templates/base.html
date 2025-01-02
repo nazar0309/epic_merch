@@ -61,25 +61,27 @@
                                 <!-- First Dropdown -->
                                 <li class="nav-item dropdown me-3">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Dropdown 1
+                                        Brand
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?brand=HyperX">HyperX</a></li>
                                         <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?brand=Razer">Razer</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?brand=SteelSeries">SteelSeries</a></li>
                                     </ul>
                                 </li>
                                 <!-- Second Dropdown -->
                                 <li class="nav-item dropdown me-3">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Dropdown 2
+                                        Category
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?category=headphones">Headhones</a></li>
                                         <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?category=mouse">Gaming Mouses</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="{% url 'products' %}?category=keyboards">Keyboards</a></li>
                                     </ul>
                                 </li>
                             </ul>
