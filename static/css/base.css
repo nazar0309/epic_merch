@@ -201,6 +201,62 @@ main {
     margin-top: 1.5em;
 }
 
+/* Sort Input Styles */
+.sort-select-wrapper {
+    position: relative;
+    width: 50%; /* Adjust the width to fit the container */
+}
+
+#sort-selector {
+    width: 100%;
+    padding: 0.5em 1em;
+    font-size: 0.9rem;
+    color: #555;
+    background-color: #fff; /* Light background for visibility */
+    border: 2px solid;
+    border-color: var(--border-color, black); /* Default border color (black) */
+    border-radius: 5px;
+    appearance: none; /* Removes default browser styling */
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Highlight border when active */
+#sort-selector:focus {
+    border-color: #00FF33; /* Neon green for focus */
+    box-shadow: 0 0 5px #00FF33;
+}
+
+/* Dropdown arrow styling */
+#sort-selector::after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    color: #555;
+    pointer-events: none;
+}
+
+/* Styling for selected and hover */
+#sort-selector option {
+    background-color: #fff; /* White background for dropdown options */
+    color: #555;
+}
+
+#sort-selector option:hover {
+    background-color: #00FF33; /* Highlighted background */
+    color: #121212; /* Dark text for readability */
+}
+
+/* Wrapper alignment for responsiveness */
+.sort-select-wrapper {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* Responsive layout for mobile devices */
 @media (max-width: 768px) {
     .dropdowns-search,
