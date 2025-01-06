@@ -3,8 +3,13 @@
 
 {% block content %}
 <div class="center-block">
-    <h1>Level Up with Epic Merch: The Ultimate Gaming Gear Store</h1>
-    <a href="{% url 'products' %}" class="btn btn-outline-success">View Products</a>
+    <div class ='logo-block'>
+        <h1>Level Up with Epic Merch: The Ultimate Gaming Gear Store</h1>
+        <a href="{% url 'products' %}" class="btn btn-outline-success">View Products</a>
+    </div>
+    <div class='delivery-block'>
+        <h2>Free delivery on orders over ${{ free_delivery_threshold }}!</h2>
+    </div>
 </div>
 
 {% endblock %}

@@ -95,29 +95,58 @@ body {
     --bs-gutter-x: 0 !important;
 }
 
+.delivery-block {
+    position: relative;
+
+}
 .center-block {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: To add background */
-    border-radius: 10px; /* Optional: Rounded corners */
-    color: #fff; /* Optional: White text color */
-    max-width: 90%; /* Optional: To avoid it going off-screen */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow */
+    border-radius: 10px; 
+    color: #fff; 
+    max-width: 90%; 
 }
 
-.center-block h1 {
+.center-block .logo-block {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: #fff; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-top-left-radius: 10px; /* Round the top-left corner */
+    border-top-right-radius: 10px; /* Round the top-right corner */
+}
+
+.center-block .logo-block h1 {
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-.center-block a {
+.center-block .logo-block a {
     text-decoration: none;
     color: white;
+    box-shadow: 0 2px 15px #00CC33;
 }
+.center-block .logo-block a:hover {
+    color: black;
+}
+.center-block .delivery-block {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+    color: black; 
+    background-color: rgba(255, 255, 255, 0.5); 
+    padding: 20px;
+}
+
+.center-block .delivery-block h2 {
+    font-size: 1em;
+    letter-spacing: 0.2em;
+}
+
+
 /* Загальні стилі */
 html, body {
     margin: 0; /* Прибирає зайві відступи */
@@ -256,6 +285,15 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.btn-black {
+    background: black;
+    color: white;
+}
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
 }
 /* Responsive layout for mobile devices */
 @media (max-width: 768px) {
