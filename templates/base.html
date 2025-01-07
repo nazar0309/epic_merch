@@ -115,7 +115,13 @@
                                 <a class="nav-link" aria-current="page" href="#">Profile</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'view_bag' %}">Cart</a>
+                                <a class="nav-link" href="{% url 'view_bag' %}">Cart
+                                    {% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        $0.00
+                                    {% endif %}
+                                </a>
                             </li>
                         </ul>
                     </div>
