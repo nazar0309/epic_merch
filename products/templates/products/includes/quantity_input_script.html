@@ -1,0 +1,40 @@
+<script type='text/javascript'>
+
+    const updateQuantity = (input, delta) => {
+        const min = parseInt(input.min, 10);
+        const max = parseInt(input.max, 10);
+        let currentValue = parseInt(input.value, 10);
+
+        if (isNaN(currentValue)) {
+            currentValue = min || 1; // Default to min or 1
+        }
+
+        const newValue = currentValue + delta;
+
+        if (newValue >= min && newValue <= max) {
+            input.value = newValue;
+        }
+    };
+
+    // Add event listeners to the decrement buttons
+    document.querySelectorAll(".qty-decrease").forEach((button) => {
+        button.addEventListener("click", (e) => {
+            const itemId = button.getAttribute("data-item_id");
+            const input = document.getElementById(`id_qty_${itemId}`);
+            if (input) {
+                updateQuantity(input, -1);
+            }
+        });
+    });
+
+    // Add event listeners to the increment buttons
+    document.querySelectorAll(".qty-increase").forEach((button) => {
+        button.addEventListener("click", (e) => {
+            const itemId = button.getAttribute("data-item_id");
+            const input = document.getElementById(`id_qty_${itemId}`);
+            if (input) {
+                updateQuantity(input, 1);
+            }
+        });
+    });
+</script>
