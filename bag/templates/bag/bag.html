@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Shopping Bag</h2>
+                <h2 class="logo-font mb-4 text-white">Shopping Bag</h2>
                 <hr>
             </div>
         </div>
@@ -25,64 +25,75 @@
                 {% if bag_items %}
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
-                            <thead class="text-black">
+                            <thead class="text-black" style="background-color: #f8f9fa;">
                                 <tr>
-                                    <th scope="col">Product Info</th>
-                                    <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
+                                    <th scope="col" class="text-center">Product Image</th>
+                                    <th scope="col">Info</th>
+                                    <th scope="col">Quantity</th>
                                     <th scope="col">Subtotal</th>
                                 </tr>
-                            </thead>
+                            </thead>                            
 
-                            {% for item in bag_items %}
+                            <tbody>
+                                {% for item in bag_items %}
                                 <tr>
-                                    <td class="p-3 w-25">
-                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                    <!-- Product Image -->
+                                    <td class="p-3 text-center align-middle">
+                                        <img class="bag-item-image img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                                     </td>
-                                    <td class="py-3">
-                                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                        <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+
+                                    <!-- Product Info -->
+                                    <td class="py-3 align-middle">
+                                        <h5 class="bag-item-name mb-1">{{ item.product.name }}</h5>
+                                        <p class="bag-item-description small text-muted mb-1">
+                                            {{ item.product.description }}
+                                        </p>
+                                        <p class="bag-item-price mb-0">${{ item.product.price }}</p>
                                     </td>
-                                    <td class="py-3">
-                                        <p class="my-0">${{ item.product.price }}</p>
+
+                                    <!-- Quantity -->
+                                    <td class="py-3 align-middle">
+                                        <p class="bag-item-quantity mb-0">{{ item.quantity }}</p>
                                     </td>
-                                    <td class="py-3 w-25">
-                                        <p class="my-0">{{ item.quantity }}</p>
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">${{ item.product.price }}</p>
+
+                                    <!-- Subtotal -->
+                                    <td class="py-3 align-middle">
+                                        <p class="bag-item-subtotal mb-0">${{ item.product.price }}</p>
                                     </td>
                                 </tr>
-                            {% endfor %}
-                            <tr>
-                                <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
-                                    {% if free_delivery_delta > 0 %}
-                                        <p class="mb-1 text-danger">
-                                            You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
-                                        </p>
-                                    {% endif %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
-                                    </a>
-                                    <a href="" class="btn btn-black rounded-0 btn-lg">
-                                        <span class="text-uppercase">Secure Checkout</span>
-                                        <span class="icon">
-                                            <i class="fas fa-lock"></i>
-                                        </span>
-                                    </a>
-                                </td>
-                            </tr>
+                                {% endfor %}
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td colspan="4" class="pt-5 text-right">
+                                        <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
+                                        <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                                        <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                        {% if free_delivery_delta > 0 %}
+                                            <p class="mb-1 text-danger">
+                                                You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                                            </p>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="text-right">
+                                        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                            <span class="icon">
+                                                <i class="fas fa-chevron-left"></i>
+                                            </span>
+                                            <span class="text-uppercase">Keep Shopping</span>
+                                        </a>
+                                        <a href="" class="btn btn-black rounded-0 btn-lg">
+                                            <span class="text-uppercase">Secure Checkout</span>
+                                            <span class="icon">
+                                                <i class="fas fa-lock"></i>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                 {% else %}
@@ -98,3 +109,4 @@
         </div>
     </div>
 {% endblock %}
+

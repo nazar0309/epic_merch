@@ -295,6 +295,85 @@ main {
     color: black !important; /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
+
+/* Table styling */
+.table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.table thead th {
+    color: #ffffff; /* Light gray background for the table header */
+    background-color: #383838; /* Darker text for contrast */
+    border-bottom: 2px solid #dee2e6; /* Subtle border for separation */
+    text-align: center; /* Center-align header text */
+    padding: 1rem;
+}
+
+.table td {
+    background-color: #c0bdbd;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+}
+
+.table td:nth-child(1)
+{
+    width: 12%;
+}
+.table td:nth-child(2) {
+    text-align: left; /* Left-align for Product Info and Description */
+    width: 25%; /* Adjusted width to take up less space */
+}
+
+.table td:nth-child(3),
+.table td:nth-child(4),
+.table td:nth-child(5) {
+    text-align: center; /* Center-align for numeric values */
+    width: 10%; /* Ensure numeric columns are consistent in width */
+}
+
+/* Bag item image */
+.bag-item-image {
+    max-width: 120px; /* Restrict image size to a smaller value */
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    object-fit: cover; /* Ensure image fits well */
+}
+
+/* Bag item details */
+.bag-item-details {
+    margin-left: 0.5rem; /* Reduced margin for a more compact layout */
+    min-width: 100px; /* Ensure the content still has a minimum space */
+    max-width: 200px; /* Restrict the maximum width for better control */
+}
+
+.bag-item-name {
+    font-size: 1.2rem; /* Slightly smaller font for compact display */
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 0.25rem;
+}
+
+.bag-item-description {
+    color: #0d0d0d !important;
+    font-size: 0.8rem; /* Reduced font size for description */
+    margin-bottom: 0.5rem;
+}
+
+.bag-item-price {
+    font-size: 1rem;
+    color: #0c00f3; /* Bootstrap primary blue for prices */
+}
+
+/* Quantity and subtotal */
+.bag-item-quantity,
+.bag-item-subtotal {
+    text-align: center;
+    font-size: 1rem;
+    color: #000000;
+}
 /* Responsive layout for mobile devices */
 @media (max-width: 768px) {
     .dropdowns-search,
@@ -316,6 +395,7 @@ main {
     .card {
         margin-bottom: 1em; /* Add spacing between cards on smaller screens */
     }
+    
 }
 
   
