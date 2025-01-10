@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -15,7 +16,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4 text-white">Shopping Bag</h2>
+                <h2 class="logo-font mb-4 text-white text-center">Shopping Bag</h2>
                 <hr>
             </div>
         </div>
@@ -53,12 +54,16 @@
 
                                     <!-- Quantity -->
                                     <td class="py-3 w-25">
-                                        <form class="form update-form" method="POST" action="">
+                                        <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                             {% csrf_token %}
-                                            <div class="col-12">
+                                            <div class="col-12" style='
+                                                            display: flex;
+                                                            align-items: center;
+                                                            justify-content: center;
+                                                            width: 100%;'>
                                                 <div class="form-group">
                                                     <div class="input-group">
-                                                        <button type="button" class="btn btn-outline-dark qty-decrease btn-sm" data-item_id="{{ item.item_id }}">
+                                                        <button type="button" class="btn btn-outline-dark qty-decrease" data-item_id="{{ item.item_id }}">
                                                             <i class="fas fa-minus fa-sm"></i>
                                                         </button>
                                                         <input 
@@ -70,20 +75,22 @@
                                                             max="99" 
                                                             data-item_id="{{ item.item_id }}" 
                                                             id="id_qty_{{ item.item_id }}">
-                                                        <button type="button" class="btn btn-outline-dark qty-increase btn-sm" data-item_id="{{ item.item_id }}">
+                                                        <button type="button" class="btn btn-outline-dark qty-increase" data-item_id="{{ item.item_id }}">
                                                             <i class="fas fa-plus fa-sm"></i>
                                                         </button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
+                                        <!-- Update Button -->
+                                        <button type="button" class="btn btn-success btn-sm update-link">Update</button>
+                                        <!-- Remove Button -->
+                                        <button type="button" class="btn btn-danger btn-sm remove-item float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}">Remove</button>
                                     </td>                                    
 
                                     <!-- Subtotal -->
                                     <td class="py-3 align-middle">
-                                        <p class="bag-item-subtotal mb-0">${{ item.product.price }}</p>
+                                        <p class="bag-item-subtotal mb-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                                 {% endfor %}
@@ -122,11 +129,11 @@
                         </table>
                     </div>
                 {% else %}
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
                     <p class="lead mb-5 text-white">Your bag is empty.</p>
                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                         <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
                 {% endif %}
@@ -140,25 +147,25 @@
 {% include 'products/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">
-    // Update quantity on click
+    // Update quantity on button click
     $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
-    })
+        var form = $(this).prev('.update-form'); // Find the associated form
+        form.submit(); // Submit the form
+    });
 
-    // Remove item and reload on click
+    // Remove item and reload on button click
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('size');
-        var url = `/bag/remove/${itemId}`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
+        var itemId = $(this).attr('id').split('remove_')[1]; // Extract item ID
+        var url = `/bag/remove/${itemId}/`; // Construct URL
+        var data = { 'csrfmiddlewaretoken': csrfToken };
 
         $.post(url, data)
          .done(function() {
-             location.reload();
+             location.reload(); // Reload the page after successful removal
          });
-    })
+    });
 </script>
+
 {% endblock %}
 

@@ -110,6 +110,10 @@ body {
     max-width: 90%; 
 }
 
+.update-link, .remove-item {
+    margin-top: 1rem;
+}
+
 .center-block .logo-block {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     color: #fff; 
@@ -324,11 +328,11 @@ main {
 }
 .table td:nth-child(1)
 {
-    width: 17.5%;
+    width: 20%;
 }
 .table td:nth-child(2) {
     text-align: left; /* Left-align for Product Info and Description */
-    width: 42.5%; /* Adjusted width to take up less space */
+    width: 40%; /* Adjusted width to take up less space */
 }
 
 .table td:nth-child(3),
@@ -361,7 +365,7 @@ main {
 }
 
 .bag-item-description {
-    max-width: 70%;
+    max-width: 100%;
     color: #0d0d0d !important;
     font-size: 0.8rem; /* Reduced font size for description */
     margin-bottom: 0.5rem;
