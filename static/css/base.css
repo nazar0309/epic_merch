@@ -53,7 +53,7 @@ body {
 
 /* Background color for dropdown menus */
 .dropdown-menu {
-    background-color: #808080; /* Dark gray for dropdown */
+    background-color: #656565; /* Dark gray for dropdown */
     border: none;
 }
 
@@ -316,21 +316,25 @@ main {
     vertical-align: middle;
     border-top: 1px solid #dee2e6;
 }
-
+.table .input-group {
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .table td:nth-child(1)
 {
-    width: 12%;
+    width: 17.5%;
 }
 .table td:nth-child(2) {
     text-align: left; /* Left-align for Product Info and Description */
-    width: 25%; /* Adjusted width to take up less space */
+    width: 42.5%; /* Adjusted width to take up less space */
 }
 
 .table td:nth-child(3),
-.table td:nth-child(4),
-.table td:nth-child(5) {
+.table td:nth-child(4) {
     text-align: center; /* Center-align for numeric values */
-    width: 10%; /* Ensure numeric columns are consistent in width */
+    width: 20%; /* Ensure numeric columns are consistent in width */
 }
 
 /* Bag item image */
@@ -357,6 +361,7 @@ main {
 }
 
 .bag-item-description {
+    max-width: 70%;
     color: #0d0d0d !important;
     font-size: 0.8rem; /* Reduced font size for description */
     margin-bottom: 0.5rem;
@@ -373,6 +378,31 @@ main {
     text-align: center;
     font-size: 1rem;
     color: #000000;
+}
+
+/* Bag item quantity buttons */
+.qty-decrease,
+.qty-increase {
+    background-color: #343a40; /* Darker background */
+    color: #ffffff; /* White text color */
+    border: 1px solid #343a40; /* Border to match the button color */
+    padding: 5px 10px; /* Add some padding to buttons */
+}
+
+.qty-decrease:hover,
+.qty-increase:hover {
+    background-color: #495057; /* Slightly lighter on hover */
+    border-color: #495057; /* Border color for hover */
+}
+
+/* Quantity input */
+.qty-sm {
+    width: 50%; /* Make the input field 2 times smaller */
+    height: calc(1.5em + .75rem + 2px); /* Adjust height to match button size */
+    text-align: center; /* Center text in input */
+    margin: 0; /* Remove any margin */
+    padding: .375rem .75rem; /* Adjust padding */
+    font-size: 1rem; /* Adjust font size */
 }
 /* Responsive layout for mobile devices */
 @media (max-width: 768px) {
