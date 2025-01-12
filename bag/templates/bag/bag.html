@@ -98,7 +98,7 @@
 
                             <tfoot>
                                 <tr>
-                                    <td colspan="4" class="pt-5 text-right">
+                                    <td colspan="4" class="pt-5 text-center">
                                         <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
                                         <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
                                         <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
@@ -110,7 +110,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="4" class="text-right">
+                                    <td colspan="4" class="text-center">
                                         <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                                             <span class="icon">
                                                 <i class="fas fa-chevron-left"></i>
@@ -125,7 +125,7 @@
                                         </a>
                                     </td>
                                 </tr>
-                            </tfoot>
+                            </tfoot>                            
                         </table>
                     </div>
                 {% else %}
