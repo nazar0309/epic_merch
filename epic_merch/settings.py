@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'products',
     'bag',
     'checkout',
+        # Other
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -77,6 +79,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'bag.contexts.bag_contents',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
@@ -104,7 +110,7 @@ LOGIN_REDIRECT_URL = '/'
 WSGI_APPLICATION = 'epic_merch.wsgi.application'
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
