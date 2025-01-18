@@ -17,9 +17,9 @@
                 <div class="my-5">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            <img class="card-img-top img-details  img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
-                        {% else %}
+                    {% else %}
                         <a href="">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                         </a>
@@ -28,7 +28,7 @@
             </div>
             <div class="product-details-container col-12 col-md-6 col-lg-4">
                 <div class="mb-5 mt-md-5">
-                    <p class="mb-0 text-white">{{ product.name }}</p>
+                    <p class="mb-0 det-name text-white">{{ product.name }}</p>
                     {% if product.category %}
                         <p class="small mt-1 mb-0">
                             <a class="text-white" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -48,8 +48,8 @@
                         <div class="form-row">
                             <div class="col-12">
                                 <p class="mt-3 text-white"><strong>Quantity:</strong></p>
-                                <div class="form-group w-50">
-                                    <div class="input-group">
+                                <div class="form-group d-flex justify-content-center"> <!-- Added flex and justify-center here -->
+                                    <div class="input-group w-50">
                                         <button type="button" class="btn btn-outline-black qty-decrease" data-item_id="{{ product.id }}">
                                             <i class="fas fa-minus"></i>
                                         </button>
@@ -82,6 +82,55 @@
                         </div>
                     </form>
                 </div>
+            </div>
+            <!-- Related Products Section -->
+            <div class='related_products text-white text-center'>
+                <h2>Related Products</h2>
+                {% if related_products %}
+                    <div class='related-products-container d-flex justify-content-between'>
+                        {% for product in related_products %}
+                            <div class="related-product-card">
+                                <div class="card h-100 border-0">
+                                    {% if product.image %}
+                                    <a href="{% url 'product_details' product.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="{% url 'product_details' product.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    </a>
+                                    {% endif %}
+                                    <div class='card-main'>
+                                        <div class="card-body pb-0">
+                                            <p class="mb-0 text-white">{{ product.name }}</p>
+                                        </div>
+                                        <div class="card-footer pt-0 border-0 text-left">
+                                            <div class="row">
+                                                <div class="col">
+                                                    {% if product.category %}
+                                                        <p class="small mt-1 mb-0">
+                                                            <a class='text-white' href="{% url 'products' %}?category={{ product.category.name }}">
+                                                                <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                                            </a>
+                                                        </p>
+                                                    {% endif %}
+                                                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                                    {% if product.rating %}
+                                                        <small><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                                    {% else %}
+                                                        <small>No Rating</small>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p>No related products available.</p>
+                {% endif %}
             </div>
         </div>
     </div>

@@ -69,9 +69,11 @@ def all_products(request):
 def product_details(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)
-
+    related_products = Product.objects.filter(
+        category=product.category).order_by('name')[:4]
     context = {
         'product': product,  # Pass as singular
+        'related_products': related_products,
     }
 
     return render(request, 'products/product_details.html', context)
