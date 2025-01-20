@@ -3,11 +3,11 @@
 
 {% block content %}
 
-<div class="content-right">
+<div class="contact-form-container">
     <h2 class="text-white">Collaborate With Us</h2>
-    <form class="about-form text-white" method="post">
+    <form class="contact-form text-white" method="post">
         <!-- Render the form fields dynamically -->
-        {{ collaborate_form | crispy }}
+        {{ contact_form | crispy }}
         
         <!-- CSRF Token for security -->
         {% csrf_token %}
@@ -18,5 +18,6 @@
         </div>
     </form>
 </div>
+
 
 {% endblock %}

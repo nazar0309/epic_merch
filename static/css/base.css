@@ -579,6 +579,80 @@ main {
     }
 }
 
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Ensure it spans the full height */
+    text-align: center;
+    padding: 20px;
+    max-width: 600px; /* Max width for the form */
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Background with some opacity for a subtle effect */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow around the form */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between form fields */
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.contact-form .form-group label {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+    border-color: #00FF33; /* Neon green on focus */
+    box-shadow: 0 0 5px #00FF33; /* Glow effect on focus */
+}
+
+.contact-form .form-control::placeholder {
+    color: #aaa;
+}
+
+.contact-form .col_btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact-form .btn-secondary {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #22c53a; /* Neon green */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .btn-secondary:hover {
+    background-color: #139233; /* Slightly darker green on hover */
+}
 
 
 /* Responsive layout for mobile devices */
@@ -601,6 +675,21 @@ main {
     }
     .card {
         margin-bottom: 1em; /* Add spacing between cards on smaller screens */
+    }
+    .contact-form-container {
+        padding: 10px;
+    }
+
+    .contact-form .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .contact-form .form-control {
+        font-size: 0.9rem;
+    }
+
+    .contact-form .btn-secondary {
+        font-size: 14px;
     }
     
 }
