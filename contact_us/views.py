@@ -1,12 +1,28 @@
 from django.shortcuts import render
-from products.models import Product
+from .forms import CollaborateForm
+from django.contrib import messages
 
-# Create your views here.
 
 def contact_us(request):
-    """ A view to return the index page """
-    products = Product.objects.all()
-    context = {
-        'products': products,
-    }
-    return render(request, 'contact_us/contact_us.html', context)
+    if request.method == "POST":
+        print('Getting the POST request...')
+        collaborate_form = CollaborateForm(data=request.POST)
+
+        if collaborate_form.is_valid():
+            collaborate_form.save()
+            messages.add_message(
+                request,
+                messages.SUCCESS,
+                'Your request has been submitted successfully.'
+                'We will get back to you soon.'
+            )
+
+    else:
+        collaborate_form = CollaborateForm()
+
+    print('Rendering template...')
+    return render(
+        request,
+        "contact_us/contact_us.html",
+        {"collaborate_form": collaborate_form},
+    )

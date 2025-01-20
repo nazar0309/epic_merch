@@ -3,5 +3,20 @@
 
 {% block content %}
 
+<div class="content-right">
+    <h2 class="text-white">Collaborate With Us</h2>
+    <form class="about-form text-white" method="post">
+        <!-- Render the form fields dynamically -->
+        {{ collaborate_form | crispy }}
+        
+        <!-- CSRF Token for security -->
+        {% csrf_token %}
+        
+        <!-- Submit Button -->
+        <div class="col_btn">
+            <button class="btn btn-secondary" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
 
 {% endblock %}
