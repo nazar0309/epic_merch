@@ -30,7 +30,9 @@ body {
     position: relative; /* Ensure it is positioned naturally (not fixed) */
     background-color: #383838; /* Dark background */
 }
-
+i {
+    color: white;
+}
 /* Logo and text color on the navbar */
 .navbar-brand {
     color: white; /* Neon green for logo */
@@ -317,7 +319,7 @@ main {
     align-items: center;
 }
 .btn-black {
-    background: black;
+    background: #383838;
     color: white;
 }
 .btn-outline-black {
@@ -413,16 +415,16 @@ main {
 /* Bag item quantity buttons */
 .qty-decrease,
 .qty-increase {
-    background-color: #343a40; /* Darker background */
+    background-color: #383838; /* Darker background */
     color: #ffffff; /* White text color */
-    border: 1px solid #343a40; /* Border to match the button color */
+    border: 1px solid #383838; /* Border to match the button color */
     padding: 5px 10px; /* Add some padding to buttons */
 }
 
 .qty-decrease:hover,
 .qty-increase:hover {
-    background-color: #495057; /* Slightly lighter on hover */
-    border-color: #495057; /* Border color for hover */
+    background-color: #656565; /* Slightly lighter on hover */
+    border-color: #656565; /* Border color for hover */
 }
 
 /* Quantity input */
