@@ -14,7 +14,15 @@
         
         <!-- Submit Button -->
         <div class="col_btn">
-            <button class="btn btn-secondary" type="submit">Submit</button>
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg keep-shopping-text" style="margin: 5px;">
+                <span class="icon">
+                    <i class="fas fa-chevron-left go_back_i"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
+            <button class="btn btn-black rounded-0 btn-lg" type="submit" style="margin: 5px;">
+                <span class="text-uppercase">Submit</span>
+            </button>
         </div>
     </form>
 </div>

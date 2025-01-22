@@ -591,7 +591,7 @@ main {
     margin: 20px auto;
     background-color: rgba(0, 0, 0, 0.5); /* Background with some opacity for a subtle effect */
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow around the form */
+    box-shadow: 0 0 8px white;
 }
 
 .contact-form {
@@ -654,6 +654,16 @@ main {
     background-color: #139233; /* Slightly darker green on hover */
 }
 
+.keep-shopping-text:hover {
+    color: white !important;
+}
+.keep-shopping-text:hover .go_back_i {
+    color: white !important;  /* Change icon color to white */
+}
+
+.go_back_i {
+    color: black;  /* Default icon color */
+}
 
 /* Responsive layout for mobile devices */
 @media (max-width: 768px) {
