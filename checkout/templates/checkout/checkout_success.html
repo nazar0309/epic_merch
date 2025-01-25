@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="center-block">
+    <div class ='logo-block'>
+        <h1 class="thank-you-header logo-font">Thank you!</h1>
+        <p class="thank-you-message">
+            Your order information is below. A confirmation email will be sent to
+            <strong>{{ order.email }}</strong>.
+        </p>
+    </div>
+    <div class='delivery-block'>
+        <a href="{% url 'products' %}" class="btn btn-outline-success bg-white text-black">
+            <h2>Now check out the latest deals!</h2>
+        </a>
+    </div>
+</div>
+
+{% endblock %}
