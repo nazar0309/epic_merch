@@ -182,3 +182,6 @@
     margin-right: 0.5rem;
     font-size: 1.25rem;
 }
+.order-summary {
+    background-color: #444 !important;
+}
