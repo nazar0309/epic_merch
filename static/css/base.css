@@ -102,15 +102,53 @@ i {
 
 }
 .center-block {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 20vh auto;
     text-align: center;
     border-radius: 10px; 
     color: #fff; 
-    max-width: 90%; 
+    max-width: 60%; 
 }
+
+.brands_container {
+    margin: 50px auto;
+    max-width: 90%;
+}
+
+.brands_logo {
+    margin: 40px auto;
+}
+
+.brands_img_container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+.brand_img {
+    display: block; /* Ensures the <a> tag behaves like a block element */
+    width: 33%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px; 
+    transition: transform 0.2s;
+}
+
+.brand_img:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 0 20px white; 
+}
+
+.brand_img_1 {
+    background-image: url('../../media/brand_images/Razer-Emblem.jpg');
+}
+.brand_img_2 {
+    background-image: url('../../media/brand_images/steel_s_logo.jpg');
+}
+.brand_img_3 {
+    background-image: url('../../media/brand_images/hyperX_logo.jpg');
+}
+
 
 .update-link, .remove-item {
     margin-top: 1rem;
@@ -665,6 +703,14 @@ main {
     color: black;  /* Default icon color */
 }
 
+.reg-log-container {
+    margin: 20px auto; /* Center the container */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    width: 50%;
+    padding: 20px;
+}
+
 /* Responsive layout for mobile devices */
 @media (max-width: 768px) {
     .dropdowns-search,
@@ -700,6 +746,16 @@ main {
 
     .contact-form .btn-secondary {
         font-size: 14px;
+    }
+
+    .brands_img_container {
+        flex-direction: column;
+    }
+
+    .brand_img {
+        margin: 0 auto;
+        width: 80%;
+        height: 300px;
     }
     
 }
