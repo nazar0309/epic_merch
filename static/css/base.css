@@ -703,12 +703,71 @@ main {
     color: black;  /* Default icon color */
 }
 
-.reg-log-container {
-    margin: 20px auto; /* Center the container */
-    background-color: rgba(255, 255, 255, 0.8);
-    color: black;
-    width: 50%;
+/* Shared container styling for authentication pages */
+.auth-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Full height for centering */
+    text-align: center;
     padding: 20px;
+    max-width: 600px; /* Limit width */
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 0 8px white; /* Neon glow */
+}
+
+/* Form styling */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between fields */
+    width: 100%;
+    max-width: 500px;
+}
+
+.auth-form .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.auth-form .form-group label {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.auth-form .form-control {
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.auth-form .form-control:focus {
+    border-color: #00FF33; /* Neon green */
+    box-shadow: 0 0 5px #00FF33;
+}
+
+.auth-form .btn-auth {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #22c53a; /* Neon green button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.auth-form .btn-auth:hover {
+    background-color: #1a9f2e; /* Darker green on hover */
 }
 
 /* Responsive layout for mobile devices */
