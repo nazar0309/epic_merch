@@ -8,7 +8,7 @@ body {
 /* Ensure dropdowns-search aligns to the left and profile-cart aligns to the right */
 /* Dropdowns and search bar alignment */
 .dropdowns-search {
-    width: 80%; /* Reduce width to bring closer to the center */
+    width: 77%; /* Reduce width to bring closer to the center */
     display: flex;
     align-items: center;
     justify-content: center; /* Even spacing between dropdowns and search */
@@ -769,6 +769,12 @@ main {
 .auth-form .btn-auth:hover {
     background-color: #1a9f2e; /* Darker green on hover */
 }
+
+
+
+
+
+
 
 /* Responsive layout for mobile devices */
 @media (max-width: 768px) {

@@ -22,5 +22,115 @@
         <a href="{% url 'products' %}?brand=HyperX" class="brand_img brand_img_3"></a>
     </div>
 </div>
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
+  <div class="brands_logo text-center text-white">
+    <h1>Watch our new listings!</h1>
+  </div>
+  <div class="carousel-inner">
+      {% for product in products %}
+          {% if forloop.counter0|divisibleby:3 %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+              <div class="d-flex justify-content-center">
+          {% endif %}
+              
+                  <div class="carrosel-card card h-100 border-0 mx-2" style="min-width: 400px !important; max-width: 400px !important;">
+                      {% if product.image %}
+                      <a href="{% url 'product_details' product.id %}">
+                          <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                      </a>
+                      {% else %}
+                      <a href="{% url 'product_details' product.id %}">
+                          <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                      </a>
+                      {% endif %}
+                      <div class='card-main'>
+                          <div class="card-body pb-0">
+                              <p class="mb-0 text-white">{{ product.name }}</p>
+                          </div>
+                          <div class="card-footer pt-0 border-0 text-left">
+                              <div class="row">
+                                  <div class="col">
+                                      {% if product.category %}
+                                      <p class="small mt-1 mb-0">
+                                          <a class='text-white' href="{% url 'products' %}?category={{ product.category.name }}">
+                                              <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                          </a>
+                                      </p>
+                                      {% endif %}
+                                      <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                      {% if product.rating %}
+                                      <small><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                      {% else %}
+                                      <small>No Rating</small>
+                                      {% endif %}
+                                  </div>
+                              </div>
+                          </div>
+                      </div> <!-- End of card-main -->
+                  </div> <!-- End of card -->
+
+          {% if forloop.counter|divisibleby:3 or forloop.last %}
+              </div> <!-- End of d-flex -->
+          </div> <!-- End of carousel-item -->
+          {% endif %}
+      {% endfor %}
+  </div>
+
+</div>
 
 {% endblock %}
+
+{% block postloadjs %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Animate the main heading and buttons
+        gsap.from(".center-block", {
+            opacity: 0,
+            y: -20,
+            duration: 0.6,
+            ease: "power2.out"
+        });
+
+        // Animate brand images (Left, Center, and Right effects)
+        let brandImages = document.querySelectorAll(".brands_img_container a");
+        if (brandImages.length === 3) {
+            gsap.from(brandImages[0], { // Leftmost brand image
+                x: "-100%",
+                opacity: 0,
+                duration: 0.7,
+                ease: "power2.out"
+            });
+
+            gsap.from(brandImages[1], { // Center brand image
+                opacity: 0,
+                scale: 0.8,
+                duration: 0.6,
+                ease: "power2.out",
+                delay: 0.1 // Small delay for a smooth effect
+            });
+
+            gsap.from(brandImages[2], { // Rightmost brand image
+                x: "100%",
+                opacity: 0,
+                duration: 0.7,
+                ease: "power2.out"
+            });
+        }
+
+        // Hover effect for brand images: Slide up when hovered
+        brandImages.forEach(function(brand) {
+            brand.addEventListener("mouseenter", function() {
+                gsap.to(brand, { y: -10, duration: 0.3, ease: "power2.out" });
+            });
+
+            brand.addEventListener("mouseleave", function() {
+                gsap.to(brand, { y: 0, duration: 0.3, ease: "power2.out" });
+            });
+        });
+    });
+</script>
+{% endblock %}
+
+
+
