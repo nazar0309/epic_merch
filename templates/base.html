@@ -128,7 +128,7 @@
                             </li>
                             {% if user.is_authenticated %}
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="{% url 'profile_url' %}">{{user.username}}</a>
+                                    <a class="nav-link text-light" href="">{{user.username}}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-light {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>

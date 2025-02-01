@@ -1,8 +1,8 @@
-#!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
 import os
 import sys
 
+# Absolute import for the env.py script
+import env  # No leading dot before 'env'
 
 def main():
     """Run administrative tasks."""
