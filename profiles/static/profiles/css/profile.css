@@ -1,0 +1,96 @@
+/* Profile Page Styling */
+.profile-container {
+    background-color: #383838; /* Dark gray background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.profile-header {
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-form {
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.profile-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.profile-form label {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.profile-form input,
+.profile-form select,
+.profile-form textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px !important;
+    border: 1px solid #ddd !important;
+    background-color: #fff !important;
+    color: #333 !important;
+}
+
+.profile-form input:focus,
+.profile-form select:focus,
+.profile-form textarea:focus {
+    border-color: #00CC33;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 204, 51, 0.5);
+}
+
+.profile-btn {
+    background-color: #00CC33;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.profile-btn:hover {
+    background-color: #009926;
+    cursor: pointer;
+}
+
+/* Order History Styling */
+.order-history {
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.order-item {
+    border-bottom: 1px solid #777;
+    padding: 10px 0;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.order-item p {
+    margin: 0;
+    color: #ddd;
+}
+
+.order-total {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* General Styling */
+.text-muted {
+    color: #aaa !important;
+}

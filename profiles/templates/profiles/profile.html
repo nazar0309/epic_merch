@@ -1,19 +1,50 @@
 {% extends "base.html" %}
 {% load static %}
-{% load bag_tools %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
 
-{% block page_header %}
-    <div class="container header-container">
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container profile-container"> 
         <div class="row">
-            <div class="col text-center">
-                <h1 class="logo-font text-white">My Account</h1>
-                <hr class="header-divider">
+            <div class="col">
+                <hr>
+                <h2 class="logo-font mb-4 text-white text-center">My Profile</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-6 delivery-info">
+                <h4 class="text-white text-center">Default Delivery Information</h4>
+                <form class="profile-form mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form"> 
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button class="profile-btn rounded-0 text-uppercase float-right">Update Information</button> 
+                </form>
+            </div>
+            <div class="col-12 col-lg-6">
+                <h4 class="text-white text-center">Order History</h4>
+                <div class="order-history">
+                    <div class="order-item">
+                        <p>Order #1 - $100.00</p>
+                    </div>
+                    <div class="order-item">
+                        <p>Order #2 - $200.00</p>
+                    </div>
+                    <div class="order-total">
+                        <p>Total: $300.00</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 {% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+{% endblock %}
+
 
