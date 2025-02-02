@@ -3,6 +3,11 @@ body {
     background-size: cover;
     color: #555;
     font-family: 'Lato';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Ensure dropdowns-search aligns to the left and profile-cart aligns to the right */
@@ -200,19 +205,17 @@ html, body {
 
 /* Основний контент розтягується на всю доступну висоту */
 main {
-    min-height: 100vh; /* Ensure the content takes full height */
-    flex: 1;
-    margin-top: 70px; /* Adjust this value to the height of your header */
-    padding-bottom: 2em; /* Optional: adds padding at the bottom for footer spacing */
+    margin-top: 70px;
+    flex-grow: 1; /* Allows the main content to expand but not force a minimum height */
+    padding-bottom: 2em;
 }
 
 /* Футер */
 .footer {
-    background-color: #383838 !important; /* Тло футера */
-    color: white; /* Текст футера */
+    background-color: #383838 !important;
+    color: white;
     text-align: center;
-    padding: 1em 0; /* Відступи для вмісту футера */
-    margin-top: auto; /* Футер знаходиться внизу сторінки */
+    padding: 1em 0;
 }
 
 .footer a {
@@ -709,10 +712,9 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh; /* Full height for centering */
     text-align: center;
     padding: 20px;
-    max-width: 600px; /* Limit width */
+    max-width: 500px; /* Limit width */
     margin: 20px auto;
     background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
     border-radius: 10px;
@@ -723,21 +725,31 @@ main {
 .auth-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 15px; /* Spacing between fields */
-    width: 100%;
-    max-width: 500px;
+    width: auto;
 }
 
 .auth-form .form-group {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    align-items: center;
+    text-align: center;
+    width: 100%;
 }
 
 .auth-form .form-group label {
     font-size: 1rem;
     color: white;
     margin-bottom: 5px;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.auth-form .form-group input {
+    width: 100%;
+    max-width: 300px;
 }
 
 .auth-form .form-control {
@@ -748,6 +760,9 @@ main {
     border: 1px solid #ccc;
     border-radius: 5px;
     transition: border-color 0.3s ease;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
 }
 
 .auth-form .form-control:focus {
@@ -769,9 +784,6 @@ main {
 .auth-form .btn-auth:hover {
     background-color: #1a9f2e; /* Darker green on hover */
 }
-
-
-
 
 
 

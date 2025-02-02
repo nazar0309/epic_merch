@@ -7,7 +7,7 @@
 {% url 'account_logout' as logout_url %}
 {% url 'view_bag' as bag_url %}
 {% url 'contact_us' as contact_url %}
-{% url 'support_chat' as support_url %}
+{% url 'profile' as profile_url %}
 
 <!doctype html>
 <html lang="en">
@@ -128,7 +128,7 @@
                             </li>
                             {% if user.is_authenticated %}
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="">{{user.username}}</a>
+                                    <a class="nav-link text-light" href="{% url 'profile' %}">{{user.username}}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-light {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
