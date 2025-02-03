@@ -139,4 +139,80 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Select the elements for the product details, image, and related products
+        const productDetails = document.querySelector('.product-details-container');
+        const productImage = document.querySelector('.image-container');
+        const relatedProducts = document.querySelectorAll('.related-product-card');
+    
+        // Function to handle sliding effect for the product details (from right to left)
+        function slideInProductDetails() {
+            let windowHeight = window.innerHeight;
+            let position = productDetails.getBoundingClientRect().top;
+    
+            if (position < windowHeight - 50) {
+                productDetails.style.transform = "translateX(0)";
+                productDetails.style.opacity = 1;
+                productDetails.style.transition = "transform 1s ease-out, opacity 1s ease-out";
+            }
+        }
+    
+        // Function to handle sliding effect for the product image (from left to right)
+        function slideInProductImage() {
+            let windowHeight = window.innerHeight;
+            let position = productImage.getBoundingClientRect().top;
+    
+            if (position < windowHeight - 50) {
+                productImage.style.transform = "translateX(0)";
+                productImage.style.opacity = 1;
+                productImage.style.transition = "transform 1s ease-out, opacity 1s ease-out";
+            }
+        }
+    
+        // Function for related product cards (slide from top to bottom)
+        function slideInRelatedProducts() {
+            let windowHeight = window.innerHeight;
+    
+            relatedProducts.forEach(function (el) {
+                let position = el.getBoundingClientRect().top;
+    
+                if (position < windowHeight - 50) {
+                    el.style.transform = "translateY(0)";
+                    el.style.opacity = 1;
+                    el.style.transition = "transform 1s ease-out, opacity 1s ease-out";
+                }
+            });
+        }
+    
+        // Set initial state for the product details (slide from right to left)
+        productDetails.style.transform = "translateX(50px)"; // Start from right
+        productDetails.style.opacity = 0;
+    
+        // Set initial state for the product image (slide from left to right)
+        productImage.style.transform = "translateX(-50px)"; // Start from left
+        productImage.style.opacity = 0;
+    
+        // Set initial state for related product cards (slide from top to bottom)
+        relatedProducts.forEach(function (el) {
+            el.style.transform = "translateY(-50px)"; // Start from top
+            el.style.opacity = 0;
+        });
+    
+        // Listen for scroll events to trigger the effects
+        window.addEventListener("scroll", function() {
+            slideInProductDetails();
+            slideInProductImage();
+            slideInRelatedProducts();
+        });
+    
+        // Trigger the animations on page load in case the elements are already in view
+        slideInProductDetails();
+        slideInProductImage();
+        slideInRelatedProducts();
+    });
+    </script>    
+    
+    
 {% endblock %}

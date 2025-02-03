@@ -47,14 +47,15 @@
     outline: none;
     box-shadow: 0 0 5px rgba(0, 204, 51, 0.5);
 }
-
+.profile-btn-container {
+    width: 100%;
+}
 .profile-btn {
+    border: none;
     background-color: #00CC33;
     color: white;
-    border: none;
+    border-radius: 8px !important;
     padding: 10px 15px;
-    border-radius: 5px;
-    text-transform: uppercase;
     font-weight: bold;
     transition: 0.3s;
 }
@@ -70,6 +71,11 @@
     padding: 20px;
     border-radius: 8px;
 }
+.order-history tbody {
+    border-radius: 8px !important;
+    background-color: #fff;
+}
+
 
 .order-item {
     border-bottom: 1px solid #777;
@@ -94,3 +100,4 @@
 .text-muted {
     color: #aaa !important;
 }
+
