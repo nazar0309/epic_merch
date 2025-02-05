@@ -27,4 +27,8 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('contact_us/', include('contact_us.urls')),
     path('profile/', include('profiles.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+# Serve media files in development (only when DEBUG=True)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

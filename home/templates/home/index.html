@@ -40,7 +40,7 @@
                       </a>
                       {% else %}
                       <a href="{% url 'product_details' product.id %}">
-                          <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                          <img class="card-img-top img-fluid" src="{% get_media_prefix %}noimage.png" alt="{{ product.name }}">
                       </a>
                       {% endif %}
                       <div class='card-main'>

@@ -40,7 +40,11 @@
                                 <tr>
                                     <!-- Product Image -->
                                     <td class="p-3 text-center align-middle">
+                                        {% if item.product.image %}
                                         <img class="bag-item-image img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                        {% else %}
+                                        <img class="bag-item-image img-fluid rounded" src="{% get_media_prefix %}noimage.png" alt="{{ item.product.name }}">
+                                        {% endif %}
                                     </td>
 
                                     <!-- Product Info -->
