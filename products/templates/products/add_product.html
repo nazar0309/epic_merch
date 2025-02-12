@@ -11,6 +11,13 @@
         <h2 class="logo-font mb-4 text-white text-center">Add Product</h2>
         <form method="POST" action="{% url 'add_product' %}" enctype="multipart/form-data" class="add-product-form">
             {% csrf_token %}
+            {% for field in form %}
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+            {% endfor %}
             {{ form|crispy }}
             <div class="add-product-btn-container">
                 <a class="btn btn-outline-light rounded-0" href="{% url 'products' %}">Cancel</a>

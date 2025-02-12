@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
+    <!-- Link the same CSS file used for Add Product form -->
     <link rel="stylesheet" href="{% static 'products/css/add_product.css' %}">
 {% endblock %}
 
@@ -9,14 +10,25 @@
 <div class="d-flex justify-content-center align-items-center min-vh-100">
     <div class="add-product-container"> 
         <h2 class="logo-font mb-4 text-white text-center">Edit Product</h2>
-        <form method="POST" action="{% url 'edit_product' product.id %}" enctype="multipart/form-data" class="add-product-form">
+        <form method="POST" enctype="multipart/form-data" class="add-product-form">
             {% csrf_token %}
-            {{ form|crispy }}
-            <div class="add-product-btn-container">
+            {% for field in form %}
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+            {% endfor %}     
+            <!-- Render the form fields as paragraphs -->
+            {{ form.as_p }}
+            <!-- Add the button with the same styling -->
+            <div class="add-product-btn-container mt-3">
                 <a class="btn btn-outline-light rounded-0" href="{% url 'products' %}">Cancel</a>
-                <button class="add-product-btn rounded-0" type="submit">Update Product</button>
+                <button class="add-product-btn rounded-0" type="submit">Save</button>
             </div>
         </form>
     </div>
 </div>
 {% endblock %}
+
+
