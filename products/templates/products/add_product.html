@@ -18,7 +18,6 @@
                             {{ field }}
                         {% endif %}
             {% endfor %}
-            {{ form|crispy }}
             <div class="add-product-btn-container">
                 <a class="btn btn-outline-light rounded-0" href="{% url 'products' %}">Cancel</a>
                 <button class="add-product-btn rounded-0" type="submit">Add Product</button>
@@ -27,4 +26,5 @@
     </div>
 </div>
 {% endblock %}
+
 

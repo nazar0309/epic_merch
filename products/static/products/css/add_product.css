@@ -63,3 +63,19 @@
     background-color: #009926;
     cursor: pointer;
 }
+
+button, input, optgroup, select, textarea {
+    margin-right: 5px;
+}
+
+.custom-control-input {
+    width: 10px !important;
+}
+
+.sel-img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
