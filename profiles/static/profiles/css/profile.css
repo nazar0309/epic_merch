@@ -101,3 +101,18 @@
     color: #aaa !important;
 }
 
+.add-product-btn {
+    border: none;
+    background-color: #00CC33;
+    color: white;
+    border-radius: 8px !important;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.add-product-btn:hover {
+    background-color: #009926;
+    cursor: pointer;
+}
+
