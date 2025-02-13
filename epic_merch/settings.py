@@ -26,9 +26,9 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'localhost',
-    'epic-merch-565735eb773a.herokuapp.com/',
+    'epic-merch-565735eb773a.herokuapp.com',
+    '127.0.0.1', 
+    'localhost', 
 ]
 
 
