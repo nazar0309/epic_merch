@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-
+from products.models import Product
 from django_countries.fields import CountryField
 
 
@@ -33,3 +33,14 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
     # Existing users: just save the profile
     instance.userprofile.save()
+    
+class Wishlist(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)  # Link to user
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)  # Link to product
+    added_at = models.DateTimeField(auto_now_add=True)  # Timestamp
+
+    class Meta:
+        unique_together = ('user', 'product')  # Prevent duplicates
+
+    def __str__(self):
+        return f"{self.user.username} - {self.product.name}"
