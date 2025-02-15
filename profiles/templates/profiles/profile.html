@@ -72,12 +72,19 @@
 
         <!-- Wishlist Section -->
         <div class="row">
+            <div class="row">
+                <div class="col">
+                    <hr>
+                    <h2 class="logo-font mb-4 text-white text-center">My Whishlist</h2>
+                    <hr>
+                </div>
+            </div>
             <div class="col-12">
-                <h4 class="text-white text-center">Your Wishlist</h4>
                 <div class="wishlist table-responsive mt-3">
                     <table class="table table-sm table-borderless">
                         <thead>
                             <tr>
+                                <th>Product Image</th>
                                 <th>Product Name</th>
                                 <th>Brand</th>
                                 <th>Price</th>
@@ -86,11 +93,19 @@
                         </thead>
                         <tbody>
                             {% for item in wishlist_items %}
-                                <tr>
+                                <tr class='whish_row'>
+                                    <!-- Product Image -->
+                                    <td class="p-3 text-center align-middle">
+                                        {% if item.product.image %}
+                                        <img class="bag-item-image img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                        {% else %}
+                                        <img class="bag-item-image img-fluid rounded" src="{% get_media_prefix %}noimage.png" alt="{{ item.product.name }}">
+                                        {% endif %}
+                                    </td>
                                     <td class='text-center'>{{ item.product.name }}</td>
                                     <td class='text-center'>{{ item.product.brand }}</td>
                                     <td class='text-center'>${{ item.product.price }}</td>
-                                    <td class='text-center'>
+                                    <td class='text-center' style="padding: 15px;">
                                         <a href="{% url 'remove_from_wishlist' item.product.id %}" class="btn btn-sm btn-danger">
                                             Remove
                                         </a>

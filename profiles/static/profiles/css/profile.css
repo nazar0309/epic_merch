@@ -101,4 +101,36 @@
     color: #aaa !important;
 }
 
+/* Wishlist Styling */
+.wishlist {
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #383838;
+}
+
+.wishlist tbody {
+    background-color: #fff;
+    border-radius: 8px !important;
+}
+
+.wishlist th {
+    text-align: center;
+    color: black;
+}
+
+.wishlist td {
+    text-align: center;
+    color: black;
+}
+
+.wishlist .btn-danger {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+.wishlist .btn-danger:hover {
+    background-color: #cc0000;
+}
 
