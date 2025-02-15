@@ -15,6 +15,8 @@
                 <hr>
             </div>
         </div>
+
+        <!-- Delivery Information Section -->
         <div class="row">
             <div class="col-12 col-lg-6 delivery-info">
                 <h4 class="text-white text-center">Default Delivery Information</h4>
@@ -26,9 +28,11 @@
                     </div>
                 </form>
             </div>
+
+            <!-- Order History Section -->
             <div class="col-12 col-lg-6">
                 <h4 class="text-white text-center">Order History</h4>
-                <div class="order-history table-responsive" style='margin-top: 1rem !important;'>
+                <div class="order-history table-responsive mt-3">
                     <table class="table table-sm table-borderless">
                         <thead>
                             <tr>
@@ -43,7 +47,7 @@
                                 <tr>
                                     <td class='text-center'>
                                         <a href="{% url 'order_history' order.order_number %}"
-                                        title="{{ order.order_number }}">
+                                           title="{{ order.order_number }}">
                                             {{ order.order_number|truncatechars:6 }}
                                         </a>
                                     </td>
@@ -63,17 +67,46 @@
                         </tbody>
                     </table>
                 </div>
+            </div>
         </div>
-        <h2>Your Wishlist</h2>
-            <ul>
-                {% for item in wishlist_items %}
-                    <li>
-                        {{ item.product.name }} - <a href="{% url 'remove_from_wishlist' item.product.id %}">Remove</a>
-                    </li>
-                {% empty %}
-                    <p>Your wishlist is empty.</p>
-                {% endfor %}
-            </ul>
+
+        <!-- Wishlist Section -->
+        <div class="row">
+            <div class="col-12">
+                <h4 class="text-white text-center">Your Wishlist</h4>
+                <div class="wishlist table-responsive mt-3">
+                    <table class="table table-sm table-borderless">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Brand</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in wishlist_items %}
+                                <tr>
+                                    <td class='text-center'>{{ item.product.name }}</td>
+                                    <td class='text-center'>{{ item.product.brand }}</td>
+                                    <td class='text-center'>${{ item.product.price }}</td>
+                                    <td class='text-center'>
+                                        <a href="{% url 'remove_from_wishlist' item.product.id %}" class="btn btn-sm btn-danger">
+                                            Remove
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% empty %}
+                                <tr>
+                                    <td colspan="4" class="text-center text-muted">Your wishlist is empty.</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
     </div>
 {% endblock %}
 
@@ -81,5 +114,6 @@
     {{ block.super }}
     <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
+
 
 
