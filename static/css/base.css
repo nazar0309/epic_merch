@@ -10,34 +10,35 @@ body {
     min-height: 100vh;
 }
 
-/* Ensure dropdowns-search aligns to the left and profile-cart aligns to the right */
-/* Dropdowns and search bar alignment */
 .dropdowns-search {
-    width: 70%; /* Reduce width to bring closer to the center */
+    width: 60%; /* Reduced width for dropdowns and search */
     display: flex;
     align-items: center;
     justify-content: center; /* Even spacing between dropdowns and search */
     gap: 1em; /* Adjust spacing between dropdowns and search bar */
-    margin-right: 2em; /* Fine-tune positioning */
+    margin-right: 2em; 
 }
 
 .profile-cart {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-end; /* Align to the right */
-    flex: 1; /* Allow space to expand */
-    margin-right: 1.5em;
+    margin-right: 1.5em; /* Fine-tune positioning */
+    width: auto; /* Allow it to grow naturally */
 }
 
-/* Main background color for the navbar */
+
 .navbar {
     width: 100%; /* Ensures the navbar spans the full width of the screen */
     position: relative; /* Ensure it is positioned naturally (not fixed) */
     background-color: #383838; /* Dark background */
 }
+
 i {
     color: white;
 }
+
 /* Logo and text color on the navbar */
 .navbar-brand {
     color: white; /* Neon green for logo */
@@ -81,6 +82,9 @@ i {
     border-color: #00FF33; /* Neon green border for the button */
 }
 
+.navbar-toggler-icon {
+    filter: invert(1); 
+}
 /* Hover effect for the search button */
 .btn-outline-success:hover {
     background-color: #00CC33; /* Neon green background on hover */
@@ -205,7 +209,7 @@ html, body {
 
 /* Основний контент розтягується на всю доступну висоту */
 main {
-    margin-top: 70px;
+    margin-top: 100px;
     flex-grow: 1; /* Allows the main content to expand but not force a minimum height */
     padding-bottom: 2em;
 }
@@ -789,7 +793,7 @@ main {
 
 
 /* Responsive layout for mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .dropdowns-search,
     .profile-cart {
         justify-content: center; /* Center both sections on mobile */
