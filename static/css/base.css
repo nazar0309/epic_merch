@@ -838,6 +838,41 @@ main {
         width: 80%;
         height: 300px;
     }
+
+    .image-container, .product-details-container {
+        width: 85%; /* Take 90% of the width on smaller devices */
+        margin: 0 auto; /* Center-align */
+    }
+    
+    .product-details-container {
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+    .related_products {
+        margin-top: 30px;
+    }
+
+    /* Related Products in column on smaller screens */
+    .related-products-container {
+        flex-direction: column; /* Stack related products vertically */
+    }
+
+    /* Adjust the spacing and alignment of related product cards */
+    .related-product-card {
+        margin-bottom: 1.5em;
+    }
+    .related-products-container {
+        flex-direction: column;
+        align-items: center; /* Center-align the products */
+    }
+
+    /* Adjust width of related products to 80% on smaller screens */
+    .related-product-card {
+        width: 80%; /* Each related product takes up 80% width */
+        margin-bottom: 1.5em; /* Adjust bottom margin for better spacing */
+    }
+    
     
 }
 
