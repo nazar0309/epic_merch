@@ -69,10 +69,8 @@
                                       </p>
                                       {% endif %}
                                       <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                                      {% if product.rating %}
-                                      <small><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                      {% else %}
-                                      <small>No Rating</small>
+                                      {% if product.dpi %}
+                                      <p class="mb-0 text-left font-weight-bold">{{ product.dpi }}</p>
                                       {% endif %}
                                   </div>
                               </div>

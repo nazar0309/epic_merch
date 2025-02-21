@@ -277,28 +277,28 @@ main {
     background-color: rgba(0, 0, 0, 0.3); /* Black background with opacity */
     border-radius: 10px;
     box-shadow: 0 0 8px white; /* Box shadow similar to image */
-    height: 500px;
+    height: 600px;
     padding: 0 !important;
     margin-right: 50px;
 }
 
 .image-container img {
-    height: 400px;
+    height: 500px;
 }
 /* Product Details Block */
 .product-details-container {
     background-color: rgba(0, 0, 0, 0.3); /* Black background with opacity */
     color: white; /* White text for contrast */
-    padding: 2em;
+    padding: 1.5em; /* Adjusted padding for better spacing */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow similar to image */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Center the text vertically and horizontally */
+    justify-content: space-between; /* Ensure space is distributed evenly */
     text-align: center;
-    height: 500px;
+    height: 600px;
     box-shadow: 0 0 8px white; /* Box shadow similar to image */
+    overflow: hidden; /* Prevent overflow of any elements */
 }
 
 /* Make the Product Name Bigger */

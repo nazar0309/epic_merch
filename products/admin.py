@@ -10,8 +10,9 @@ class ProductAdmin(admin.ModelAdmin):
         'brand',
         'category',
         'price',
-        'rating',
         'image',
+        'color',
+        'wireless',
     )
 
     ordering = ('sku',)

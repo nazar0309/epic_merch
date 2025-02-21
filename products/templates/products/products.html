@@ -80,11 +80,6 @@
                                                     </p>
                                                 {% endif %}
                                                 <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                                                {% if product.rating %}
-                                                    <small><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                                {% else %}
-                                                    <small>No Rating</small>
-                                                {% endif %}
                                                 {% if request.user.is_superuser %}
                                                     <small class="ml-3" style='margin-top: 7px;'>
                                                         <button type="button" class="btn btn-primary btn-sm">
