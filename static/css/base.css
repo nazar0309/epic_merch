@@ -297,10 +297,9 @@ main {
     justify-content: space-between; /* Ensure space is distributed evenly */
     text-align: center;
     height: 600px;
-    box-shadow: 0 0 8px white; /* Box shadow similar to image */
+    box-shadow: 0 0 8px white; /* Box shadow similar to image */          
     overflow: hidden; /* Prevent overflow of any elements */
-}
-
+}                                                                                                                           
 /* Make the Product Name Bigger */
 .product-details-container .det-name  {
     font-size: 200% !important;
