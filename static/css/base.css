@@ -32,7 +32,7 @@ body {
 .navbar {
     width: 100%; /* Ensures the navbar spans the full width of the screen */
     position: relative; /* Ensure it is positioned naturally (not fixed) */
-    background-color: #383838; /* Dark background */
+    background-color: black; /* Dark background */
 }
 
 i {
