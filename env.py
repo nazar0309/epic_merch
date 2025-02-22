@@ -6,3 +6,5 @@ os.environ.setdefault('STRIPE_PUBLIC_KEY', 'pk_test_51QkA8y09i9j5PbfJEc8EpZ8yaLE
 os.environ.setdefault('STRIPE_SECRET_KEY', 'sk_test_51QkA8y09i9j5PbfJxN9KqUcUDJimzlypSQQYSzPXWmZTKYL6qrb59ZiBDP2RMHBwDTflWnU838iNjs8lR5DKCpBN00JVaTZ4Y6')
 os.environ.setdefault('STRIPE_WH_SECRET', 'whsec_rLgJx5rRe2hvz46eZzDjtM1JVf49jFxU')
 os.environ.setdefault('DATABASE_URL', ' postgresql://neondb_owner:iRNmox1eaj7I@ep-nameless-waterfall-a2mq6567.eu-central-1.aws.neon.tech/agent_upon_mural_301297')
+os.environ.setdefault('EMAIL_HOST_PASS', 'wmdg zmdj dcoe mjxg')
+os.environ.setdefault('EMAIL_HOST_USER', 'nazartsuper0309@gmail.com')
