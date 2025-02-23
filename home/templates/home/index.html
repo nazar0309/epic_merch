@@ -32,8 +32,8 @@
           <div class="carousel-item {% if forloop.first %}active{% endif %}">
             <div class="d-flex flex-column flex-md-row flex-wrap justify-content-center align-items-center w-100">
           {% endif %}
-              
-                  <div class="carrosel-card card h-100 border-0 mx-2" style="min-width: 400px !important; max-width: 400px !important;">
+                  <div class="carrosel-card card h-100 border-0 mx-2" style="min-width: 400px !important; max-width: 400px !important;
+                        margin: 30px;">
                       {% if product.image %}
                       <a href="{% url 'product_details' product.id %}">
                           <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -77,7 +77,6 @@
                           </div>
                       </div> <!-- End of card-main -->
                   </div> <!-- End of card -->
-
           {% if forloop.counter|divisibleby:3 or forloop.last %}
               </div> <!-- End of d-flex -->
           </div> <!-- End of carousel-item -->

@@ -1,0 +1,216 @@
+/* Order Summary Section */
+.order-summary {
+    background-color: #383838; /* Dark gray background */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: white;
+}
+
+.order-summary-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.order-summary-items {
+    margin-top: 1em;
+}
+
+.order-summary-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.order-summary-item:last-child {
+    border-bottom: none;
+}
+
+.order-total {
+    margin-top: 1.5em;
+}
+
+/* Checkout Form Styles */
+.checkout-form {
+    color: white !important;
+    background-color: #383838; /* Dark gray background */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.checkout-form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+
+.checkout-fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 1.5em;
+}
+
+.fieldset-label {
+    font-weight: bold;
+    margin-bottom: 0.75em;
+}
+
+/* Add margin between individual form fields */
+.checkout-form .form-group,
+.checkout-form .form-check {
+    margin-bottom: 0.75em; /* Adds space between form fields */
+}
+
+.submit-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Button Styles */
+.btn-outline-black {
+    color: black;
+    border: 1px solid black;
+}
+
+.btn-black {
+    background-color: black;
+    color: white;
+}
+
+.btn-outline-black:hover,
+.btn-black:hover {
+    background-color: #444;
+    border-color: #444;
+}
+
+.icon {
+    margin-right: 0.5em;
+}
+
+/* Product Image Styling */
+.order-item-img {
+    width: 150px; /* Reduced size */
+    height: 150px; /* Square aspect ratio */
+    object-fit: cover; /* Ensures image fits well */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    background-color: #f0f0f0; /* Light gray background if no image */
+}
+
+.StripeElement,
+.stripe-style-input {
+    box-sizing: border-box;
+    height: calc(1.5em + 0.75rem + 2px); /* Match input field height */
+    padding: 0.375rem 0.75rem; /* Consistent padding */
+    border: 1px solid #ddd; /* Border similar to input fields */
+    border-radius: 8px; /* Match rounded corners */
+    background-color: white; /* Ensure white background */
+    font-size: 1rem; /* Match font size of input fields */
+    font-family: inherit; /* Use inherited font-family */
+    color: #495057; /* Text color for consistency */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); /* Inner shadow for input field effect */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus {
+    border-color: #80bdff; /* Highlight border on focus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focus shadow */
+    outline: none; /* Remove default outline */
+}
+
+.StripeElement--webkit-autofill {
+    background-color: #fefde5 !important; /* Autofill background */
+}
+
+.stripe-style-input::placeholder {
+    color: #6e6e6e !important; /* Placeholder text color */
+    font-style: italic; /* Optional: Italicized placeholder text */
+}
+
+.thank-you-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Full viewport height */
+    text-align: center;
+    padding: 20px;
+}
+
+.thank-you-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #ffffff; /* Dark gray */
+}
+
+.thank-you-divider {
+    width: 50px;
+    height: 3px;
+    background-color: #ffffff; /* Medium gray */
+    margin: 1rem auto;
+}
+
+.thank-you-message {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff; /* Subtle gray */
+}
+
+.thank-you-btn {
+    background-color: #383838; /* Dark gray */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 15px #00CC33;
+}
+
+.thank-you-btn:hover {
+    background-color: #818181; /* Slightly lighter gray */
+    text-decoration: none;
+    border-color: #00FF33;
+}
+
+.thank-you-icon {
+    margin-right: 0.5rem;
+    font-size: 1.25rem;
+}
+.order-summary {
+    background-color: #444 !important;
+}
+
+#loading-overlay {
+	display: none;
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(56, 56, 56, 0.7);
+    z-index: 9999;
+}
+
+.loading-spinner {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+}
+
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
