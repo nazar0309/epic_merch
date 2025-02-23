@@ -1,0 +1,85 @@
+/* Centering the Add Product Form */
+.add-product-container {
+    background-color: #383838;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Form Styling */
+.add-product-form {
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.add-product-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.add-product-form label {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.add-product-form input,
+.add-product-form select,
+.add-product-form textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px !important;
+    border: 1px solid #ddd !important;
+    background-color: #fff !important;
+    color: #333 !important;
+}
+
+.add-product-form input:focus,
+.add-product-form select:focus,
+.add-product-form textarea:focus {
+    border-color: #00CC33;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 204, 51, 0.5);
+}
+
+/* Button Styling */
+.add-product-btn-container {
+    text-align: center;
+}
+
+.add-product-btn {
+    border: none;
+    background-color: #00CC33;
+    color: white;
+    border-radius: 8px !important;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.add-product-btn:hover {
+    background-color: #009926;
+    cursor: pointer;
+}
+
+button, input, optgroup, select, textarea {
+    margin-right: 5px;
+}
+
+.custom-control-input {
+    width: 10px !important;
+}
+
+.sel-img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.related-products-container .related-product-card:first-child:focus,
+.related-products-container .related-product-card:first-child:active {
+    border: none !important; /* Remove border in active or focus states */
+}
+
+
