@@ -636,6 +636,7 @@ main {
     background-color: rgba(0, 0, 0, 0.5); /* Background with some opacity for a subtle effect */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 0 8px white;
+    max-height: 55vh;
 }
 
 .contact-form {
@@ -814,6 +815,7 @@ main {
     }
     .contact-form-container {
         padding: 10px;
+        max-width: 80%;
     }
 
     .contact-form .form-group label {
@@ -870,10 +872,6 @@ main {
     .related-product-card {
         width: 80%; /* Each related product takes up 80% width */
         margin-bottom: 1.5em; /* Adjust bottom margin for better spacing */
-    }
-
-    .card {
-        max-width: 90%;
     }
     
     
