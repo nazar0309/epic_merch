@@ -92,11 +92,11 @@
 /* Product Image Styling */
 .order-item-img {
     width: 150px; /* Reduced size */
-    height: 150px; /* Square aspect ratio */
     object-fit: cover; /* Ensures image fits well */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
     background-color: #f0f0f0; /* Light gray background if no image */
+    margin-right: 15px;
 }
 
 .StripeElement,
@@ -203,6 +203,10 @@
     justify-content: center;
     margin: 0;
     height: 100%;
+}
+
+.mr_style {
+    margin-right: 10px;
 }
 
 select,
