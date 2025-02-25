@@ -10,6 +10,8 @@ from bag.contexts import bag_contents
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from django.contrib.auth.models import AnonymousUser
+from django.core.mail import send_mail
+
 
 
 import stripe
@@ -99,7 +101,7 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts
+    Handle successful checkouts and send confirmation email.
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
@@ -125,9 +127,22 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
+    # Send confirmation email
+    subject = "Thank you for your purchase!"
+    user_email = order.email
+    profile_url = request.build_absolute_uri('/profile/')
+    message = f"Thank you for your purchase, {user_email}.\n\nYou can view your order in your profile page: {profile_url}"
+
+    send_mail(
+        subject,
+        message,
+        settings.DEFAULT_FROM_EMAIL,
+        [user_email],
+        fail_silently=False,
+    )
+
     messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+        Your order number is {order_number}. A confirmation email has been sent to {user_email}.')
 
     if 'bag' in request.session:
         del request.session['bag']
