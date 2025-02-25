@@ -628,7 +628,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh; /* Ensure it spans the full height */
+    height: fit-content;
     text-align: center;
     padding: 20px;
     max-width: 600px; /* Max width for the form */
@@ -636,7 +636,6 @@ main {
     background-color: rgba(0, 0, 0, 0.5); /* Background with some opacity for a subtle effect */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 0 8px white;
-    max-height: 55vh;
 }
 
 .contact-form {
