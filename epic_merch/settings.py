@@ -103,7 +103,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
-
+CSRF_TRUSTED_ORIGINS = ['https://epic-merch-565735eb773a.herokuapp.com']
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
