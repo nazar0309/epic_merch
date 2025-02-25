@@ -11,3 +11,67 @@ Join the **Epic Merch** community today and level up your gaming setup with the 
 ![Epic Merch Screenshot](/media/readme/responsive.png)  
 
 [Visit Epic Merch Live](https://epic-merch-565735eb773a.herokuapp.com/)
+
+---
+
+## Table of Contents
+
+### [User Experience](#user-experience-ux)
+
+- [Project Goals](#project-goals)
+- [Agile Methodology](#agile-methodology)
+- [Target Audience](#target-audience)
+- [First time user](#first-time-user)
+- [Registered user](#registered-user)
+- [Admin user](#admin-user)
+
+### [SEO and Marketing](#seo-and-marketing-1)
+
+### [Design](#design-1)
+
+- [Color Scheme](#color-scheme)
+- [Product Images](#product-images)
+- [Wireframes](#wireframes)
+- [Database Scheme](#database-scheme)
+- [Data Model](#data-models)
+- [User Journey](#user-journey)
+
+### [Security Features](#security-features-1)
+
+- [User Authentication](#user-authentication)
+- [Login Required](#login-required)
+- [CSRF Protection](#csrf-protection)
+- [Custom Views Security Measures](#custom-views-security-measures)
+- [Form Validation](#form-validation)
+
+### [Features](#features-1)
+
+- [Existing Features](#existing-features)
+- [Features Left to Implement](#features-left-to-implement)
+
+### [Technologies Used](#technologies-used-1)
+
+- [Languages Used](#languages-used)
+- [Databases Used](#databases-used)
+- [Frameworks Used](#frameworks-used)
+- [Payment Systyem](#payment-system)
+- [Programs Used](#programs-used)
+- [Emails and Newsletter](#emails-and-newsletter)
+- [SEO and Marketing](#seo-and-marketing-2)
+
+### [Deployment and Local development](#deployment-and-local-development-1)
+
+- [Local Development](#local-development)
+- [ElephantSQL Database](#elephantsql-database)
+- [AWS Amazon](#aws-amazon)
+- [Heroku Deployment](#heroku-deployment)
+
+### [Testing](#testing-1)
+
+### [References](#references-1)
+
+- [Docs](#docs)
+- [Content](#content)
+- [Acknowledgements](#acknowledgements)
+
+---
