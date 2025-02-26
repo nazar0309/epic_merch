@@ -20,6 +20,7 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('contact_us/', include('contact_us.urls')),
     path('profile/', include('profiles.urls')),
+    path('newsletter/', include('newsletter.urls')),
 ]
 
 # Serve media files in development (only when DEBUG=True)

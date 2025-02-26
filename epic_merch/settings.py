@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY")
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'epic-merch-565735eb773a.herokuapp.com',
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'checkout',
     'contact_us',
     'profiles',
+    'newsletter',
         # Other
     'crispy_forms',
     'crispy_bootstrap5', 

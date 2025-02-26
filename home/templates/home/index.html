@@ -86,13 +86,19 @@
 
 </div>
 
-<!-- Newsletter Subscription Section -->
-<h2>Subscribe to Our Newsletter</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Subscribe</button>
-</form>
+
+<!-- Newsletter Section -->
+<div class="col-md-12 text-center mb-3">
+    <div class="brands_logo text-center text-white">
+        <h1>Subscribe to Our Newsletter!</h1>
+    </div>
+    <form action="{% url 'subscribe_newsletter' %}" method="POST" class="newsletter-form d-flex justify-content-center">
+        {% csrf_token %}
+        <label for="newsletter-email" class="visually-hidden">Email address</label>
+        <input id="newsletter-email" type="email" name="email" placeholder="Enter your email" class="form-control w-50 me-2" required>
+        <button type="submit" class="btn btn-outline-light rounded-0">Subscribe</button>
+    </form>                    
+</div>
 
 {% endblock %}
 
