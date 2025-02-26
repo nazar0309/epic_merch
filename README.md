@@ -162,11 +162,10 @@ By leveraging Agile methodology, **Epic Merch** maintained flexibility, adaptabi
 
 #### Epics
 
-- Product Viewing and Navigation
-- Product Sorting and Searching
-- Purchase and Checkout
-- Admin and Store Management
-- Registration and User Accounts
+- Project Setup & Deployment
+- Milestone 2: Product & Shopping Cart Functionality
+- Milestone 3: Checkout, Payments & Order Management
+- Milestone 4: Admin Panel & Product Management
 
 #### User Stories
 
@@ -311,3 +310,54 @@ By leveraging Agile methodology, **Epic Merch** maintained flexibility, adaptabi
 ✅ **Acceptance Criteria:**
 - A "Delete" button should be available for each product.
 - Deleted products should no longer appear in product listings.
+
+## Target Audience
+
+- **Gaming Enthusiasts & Collectors**: Individuals passionate about gaming culture, seeking exclusive merchandise and high-quality gaming gear.
+- **Tech-Savvy Shoppers**: Users who prefer a seamless, intuitive, and efficient online shopping experience.
+- **Mobile Gamers & Users**: Customers who shop on the go and require a fully optimized mobile experience.
+- **Community-Driven Gamers**: Those who engage with fellow gamers, share reviews, and participate in gaming discussions.
+- **Content Creators & Streamers**: Influencers looking for the best gaming accessories to enhance their streaming setups.
+- **Gift Shoppers**: People searching for the perfect gaming-related gifts for friends and family.
+
+Epic Merch provides a dynamic e-commerce experience tailored for gamers, offering a curated selection of products, seamless shopping, and a thriving community of gaming enthusiasts.
+
+## First Time User
+
+- Simple and intuitive website navigation for easy exploration and discovery.
+- Engaging visuals showcasing available products.
+- Informative content providing an overview of the platform’s functionality and upcoming updates.
+- Search bar to help users find their favorite gaming merchandise.
+- Easy registration process for a hassle-free shopping experience.
+- Secure and seamless checkout process.
+
+## Registered User
+
+- Quick and secure login with a personalized user account.
+- Ability to browse and review products.
+- Faster checkout process with stored payment and shipping details.
+- User profile management for updating personal information.
+- Wishlist and order tracking for a convenient shopping experience.
+
+## Admin User
+
+- Secure login with admin access control.
+- Dashboard for managing products, reviews, and users.
+- Ability to add, edit, or remove products and categories.
+- User account management, including editing or deleting user profiles and orders.
+
+## SEO and Marketing
+
+Please see [SEO and Marketing](SEO_MARKETING.md) for a detailed analysis of the marketing strategy for Epic Merch.
+
+## Design
+
+The **Epic Merch E-commerce Platform** is crafted to deliver a visually captivating and user-friendly experience, inspired by the dynamic world of gaming.
+
+- **Dark Theme**: The interface features a sleek dark mode for an immersive, high-contrast look that enhances product visibility.
+- **Neon Accents**: Neon highlights at the background are used to emphasize key elements, such as call-to-action buttons and important sections.
+- **Grid-Based Layout**: Clean and spacious grid-based design ensures smooth navigation and easy product browsing.
+- **Interactive Elements**: Hover effects and animations enhance engagement, making the shopping experience more interactive and enjoyable.
+- **Mobile-Optimized**: Fully responsive design for seamless shopping across all devices.
+
+
