@@ -86,6 +86,14 @@
 
 </div>
 
+<!-- Newsletter Subscription Section -->
+<h2>Subscribe to Our Newsletter</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Subscribe</button>
+</form>
+
 {% endblock %}
 
 {% block postloadjs %}
