@@ -131,28 +131,28 @@ By leveraging Agile methodology, **Epic Merch** maintained flexibility, adaptabi
 <summary> User Stories Template
 </summary>
 
-![User Stories, Template](/media/sreenshots_webp/user_story.webp)
+![User Stories, Template](/media/readme/u_s_template.png)
 </details>
 
 <details>
 <summary> User Stories, Issues
 </summary>
 
-![User Stories, Issues](/media/sreenshots_webp/issues.webp)
+![User Stories, Issues](/media/readme/u_s.png)
 </details>
 
 <details>
 <summary> Project Milestones
 </summary>
 
-![Project Milestones](/media/sreenshots_webp/milestones.webp)
+![Project Milestones](/media/readme/milstones.png)
 </details>
 
 <details>
 <summary> Project Board
 </summary>
 
-![Project Board](/media/sreenshots_webp/project_board.webp)
+![Project Board](/media/readme/p_board.png)
 
 - <a href="https://github.com/users/ObiOne84/projects/5" target="_blank">Visit project GitHub page here.</a>
 
