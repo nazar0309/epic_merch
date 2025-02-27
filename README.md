@@ -473,7 +473,7 @@ The **Epic Merch E-commerce Platform** is crafted to deliver a visually captivat
 <details>
 <summary> Data Scheme </summary>
 
-![Data Scheme](/media/sreenshots_webp/erd.webp)
+![Data Scheme](/media/readme/db_diagram.png)
 </details>
 
 ### Data Models
@@ -608,6 +608,205 @@ The **Epic Merch E-commerce Platform** is crafted to deliver a visually captivat
 ---
 
 This section provides an overview of the database models used in **OwlBookstore**, highlighting their relationships and purpose within the platform. The data model supports the core functionalities of the platform, such as managing products, handling orders, and enabling user interaction through wishlists, contact requests, and newsletter subscriptions. The schema also sets the foundation for future features like the **Community Forum** and **Book Exchange Market**.
+
+## Security Features
+
+### User Authentication
+
+- Django Allauth is a powerful and comprehensive third-party package for handling authentication, registration, and account management in Django applications. It provides several security features to help protect user accounts and sensitive information.
+
+### Login Required
+
+- In Django, LoginRequiredMixin is a mixin class provided by the django.contrib.auth.mixins module. It is used in class-based views to require that the user making the request must be authenticated. If the user is not authenticated, the mixin will automatically redirect the user to the login page.
+
+- You can use LoginRequiredMixin by inheriting it in your class-based views. Typically, it's used as the leftmost mixin in the inheritance chain to ensure that authentication checks are performed before any other mixins. If the user is authenticated, the view proceeds as normal. If the user is not authenticated, the LoginRequiredMixin automatically redirects them to the login page.
+
+- Using LoginRequiredMixin helps in enforcing authentication requirements for views where you want to ensure that only authenticated users have access. It simplifies the process of handling authentication checks and redirects in class-based views.
+
+- Similarly, ``@login_required`` is a decorator commonly used in web development frameworks like Django in Python. When applied to a view function, it ensures that the user accessing that particular view is logged in. If the user is not logged in, they are typically redirected to a login page or given an appropriate error message, depending on how it's configured. This decorator helps protect sensitive or restricted views, ensuring that only authenticated users can access them.
+
+### CSRF Protection
+
+- In Django, CSRF (Cross-Site Request Forgery) protection is implemented using a CSRF token. The CSRF token is a unique value associated with a user's session, and it is used to verify the legitimacy of a form submission. When a user logs in or visits a page with a form, Django generates a unique CSRF token for that user's session. Django provides built-in middleware (django.middleware.csrf.CsrfViewMiddleware) that automatically checks and enforces CSRF protection for all incoming POST requests.
+The middleware ensures that each form submission includes a valid CSRF token.
+By incorporating these CSRF protection mechanisms, Django helps prevent attackers from executing malicious actions on behalf of authenticated users. The use of unique tokens tied to user sessions adds an additional layer of security, ensuring that form submissions are authorized and originate from legitimate sources.
+
+- When rendering an HTML form, Django includes the CSRF token as a hidden input field within the form. The {% csrf_token %} template tag is used to include the CSRF token in the form. See example below:
+
+```html
+<form method="post" action="{% url 'custom_view' %}">
+    {% csrf_token %}
+    {% form.as_p %}
+
+    <button type="submit">Submit</button>
+</form>
+```
+
+### Custom Views Security Measures
+
+- Overall, views incorporate authentication checks, form validation, and ownership verification to secure various operations. It's important to note that Django's built-in features, such as the authentication system, contribute to the overall security of the application.
+
+  - The `all_products` view handles different scenarios gracefully and provides appropriate error messages to users. For instance, it informs users if there are no results matching their search query or category selection, and it redirects them to the appropriate page. Filtering of querysets (comics and books) based on user inputs is done using Django's ORM, which helps prevent direct SQL injection vulnerabilities. Also, pagination is implemented, which helps prevent overloading the server with large amounts of data requested by users. Lastly, the Django messages framework is used to display messages to users and the view only exposes necessary data to users, such as product information, search results, and pagination controls, while keeping sensitive server-side logic and data hidden from clients.
+  - The `product_detail` view checks if the provided product ID exists in the database before attempting to retrieve the product details. This helps prevent potential database-related errors or exploitation attempts. Before allowing users to submit a review, the view checks if the user is authenticated. If not, it redirects them to the login page and displays an appropriate error message. This prevents unauthorized access to the review functionality. When users submit a review, the view validates the form data. If the form is not valid, an error message is displayed to the user, ensuring that only properly formatted and validated reviews are accepted.
+  - The `add_product` and `edit_product` views are protected using the LoginRequiredMixin, ensuring that only authenticated users can access it. Within the dispatch method, an additional check is performed to ensure that only users with superuser privileges (typically site owners) can access the views. If a user without superuser privileges attempts to access the views, they are redirected to the home page with an error message. The views validate the form data submitted when adding a new book or comic.
+  - The `add_to_wishlist`, `remove_from_wishlist`, `delete_product`. Similar to the add_product view, an authorization check is performed to ensure that only superusers (store owners) can update products. If a non-superuser attempts to access this view, they are redirected to the home page with an error message. Additionaly, if the requested product does not exist, the view renders a custom 404 page, which provides a user-friendly error message. This prevents exposing internal details of the application and maintains a better user experience.
+  - The `profile` view implements security measures to protect user profiles, validate form data, and provide feedback to users about the outcome of profile updates.
+  - The `order_history` view implements security measures to protect user order history, ensure authorization, and provide relevant feedback to the user about the viewed order.
+  - The home app views providing feedback messages (success or error messages) to users after form submission. The form consist data validation, and user's messages are limited to 1000 charactres.
+  - The checkout app views ensure that form to used to collect data are valid before submissoin. Moreover, the payment process is handled securely by Stripe. The user's input is validated before processing and errors are displayed gracefully.
+  - The bag app views validate data inputs, to ensure that correct information are processed. Errors are handled gracefully using Django's messaging system. Session data is used to store only bag content. Also, users can only add limited number of each number to their bag (10 units).
+
+### Form Validation
+
+Forms in the project use basic Django form validation.
+
+
+# Epic Merch Store
+
+# Epic Merch Store
+
+## Features
+
+- **Home Page**  
+  - Displays a navigation bar with the store logo, hero section, and a "Shop Now" button that directs unregistered users to the products page.  
+  - The footer contains links to "About Us", "Contact Us", "FAQ", and "Privacy Policy" sections, as well as social media links and a newsletter sign-up form.  
+  - The search bar allows users to filter products by name, category, price, or rating.  
+  - The "MyAccount" section enables users to log in, sign up, view their profile, and access the admin panel (for store admins).
+  
+  ![Home Page Screenshot](media/readme/homepage.png)
+
+- **Unregistered Users (All Users)**  
+  - Users can sign up for an account and log in.  
+  - Users can browse, search, and view detailed product information.  
+  - Users can add products to the shopping cart.  
+  - Users can access various store-related pages via the footer links.
+
+  ![Unregistered User](media/readme/unreg_user.png)
+
+- **Registered Users**  
+  - After logging in, users can access:  
+    - **My Profile**: View and update personal information, including default delivery address.
+    - **Order History**: View past orders and track their status.
+    - **Wishlist**: Manage a list of favorite products for future purchase.
+    - **Password & Email Updates**: Update account details like email and password.
+    - **Wishlist Management**: Add or remove items from the wishlist and move items to the shopping cart.
+  
+  ![Registered User Dashboard](media/readme/reg_user.png)
+
+- **Admin Features**  
+  - Admin users can:  
+    - Add, edit, or delete products.  
+    - Approve or delete product reviews.  
+    - Access the admin panel to manage user accounts and orders.
+
+  ![Admin Panel](media/readme/admin.png)
+
+- **Newsletter Subscription Form**  
+  - Users can subscribe to the store's newsletter directly from the home page footer.  
+  - They enter their email address to receive promotions, updates, and store news.
+  
+  ![Newsletter Subscription Form](media/readme/subscribe.png)
+
+- **Brands Section**  
+  - The home page features a **Brands Section** that showcases various brand logos.  
+  - Users can click on brand logos to view products available from that brand.
+
+  ![Brands Section](media/readme/brands.png)
+
+- **Last Listings Section**  
+  - The **Last Listings** section displays recently added products to the store.  
+  - This section allows users to quickly view the most recent products available for purchase.
+
+  ![Last Listings Section](media/readme/last_products.png)
+
+---
+
+## Existing Features
+
+- **Profile Page**
+  - Users can view and manage their profile details, including:  
+    - **Order History**: View past orders and their current status.
+    - **Wishlist**: Access and manage their wishlist of favorite products.
+    - **Default Delivery Information**: View and edit the default shipping address for their orders.
+
+  ![Profile Page](media/readme/profile.png)
+
+- **Navigation Bar**
+  - The navigation bar includes a search bar, links to various pages, and dynamic cart information.  
+    - For registered users, it shows the cart and user profile options.
+    - For admins, it includes an admin panel link.
+
+  ![Navigation Bar](media/readme/navigation.png)
+
+- **Footer**
+  - Contains copyright info, social media links, and newsletter subscription.  
+  - Newsletter sign-up appears as a pop-up on hover (desktop) or on click (mobile).
+
+  ![Footer](media/readme/footer.png)
+
+- **Banner**
+  - A rotating banner highlights promotions, free delivery offers, and newsletter subscription options.
+
+  ![Banner](media/readme/banner.png)
+
+- **Sign Up Page**
+  - Users can sign up with a username and password to create an account.
+
+  ![Sign Up Page](media/readme/sign_up.png)
+
+- **Login Page**
+  - Users can log in with their credentials.
+
+  ![Login Page](media/readme/sigh_in.png)
+
+- **Browse Available Products**
+  - Users can browse through a catalog of products with filter and sort options (by price, name, rating, category).
+
+  ![Browse Products](media/readme/browse.png)
+
+- **Product Page**
+  - Each product is displayed with images, description, price, and quantity options.
+  
+  ![Product Page](media/readme/products.png)
+  
+- **Pagination & Sorting**
+  - Product pagination supports up to 24 products per page, and sorting options include price, category, name, and rating.
+
+  ![Pagination & Sorting](media/readme/filter.png)
+
+- **Basket & Checkout**
+  - Users can view products in the shopping cart and proceed to checkout.
+
+  ![Basket](media/readme/bag.png)
+   ![Checkout](media/readme/checkout.png)
+
+- **Wishlist**
+  - Users can add or remove products to/from their wishlist for future reference.
+
+  ![Wishlist](media/readme/whishlist.png)
+
+- **Manage Products**
+  - Admins can manage products through the manage_products template.
+
+  ![Manage Products](media/readme/admin.png)
+
+---
+
+## Features Left to Implement
+
+- **Advanced User Reviews**  
+  - Allow users to filter reviews by rating and date.
+
+- **Advanced Wishlist Features**  
+  - Ability for users to share their wishlists or purchase items from other users' lists.
+
+- **Gifts and Merchandise**  
+  - Expand the store with additional items such as apparel, posters, and collectible merchandise.
+  
+- **Community Forum**  
+  - Implement a forum for users to discuss their favorite products, genres, and trends.
+
+
 
 
 
