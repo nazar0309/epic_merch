@@ -105,21 +105,21 @@
 <details>
 <summary>Best gaming keyboard</summary>
 
-![Best gaming keyboard](/media/screenshots_webp/keyword_best_gaming_keyboard.webp)
+![Best gaming keyboard](/media/readme/keyboard_seo.png)
 
 </details>
 
 <details>
 <summary>Wireless gaming mouse</summary>
 
-![Wireless gaming mouse](/media/screenshots_webp/keyword_wireless_gaming_mouse.webp)
+![Wireless gaming mouse](/media/readme/mouse_seo.png)
 
 </details>
 
 <details>
 <summary>Best gaming headphones</summary>
 
-![Best gaming headphones](/media/screenshots_webp/keyword_best_gaming_headphones.webp)
+![Best gaming headphones](/media/readme/headphones_seo.png)
 
 </details>
 
@@ -131,7 +131,11 @@ These keywords help us **rank higher in search results** and **attract more game
 
 ### SEO Strategies for Pro Gaming Gear
 
-#### 1. Meta Tags Optimization
+#### 1. Schema Markup (Structured Data)
+
+![Schema Markup ](/media/screenshots_webp/keyword_best_gaming_headphones.webp)
+
+#### 2. Meta Tags Optimization
 
 ```html
 <meta name="title" content="Gaming Keyboards, Mice & Headphones | Pro Gaming Gear">
