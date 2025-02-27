@@ -660,11 +660,6 @@ By incorporating these CSRF protection mechanisms, Django helps prevent attacker
 
 Forms in the project use basic Django form validation.
 
-
-# Epic Merch Store
-
-# Epic Merch Store
-
 ## Features
 
 - **Home Page**  
@@ -785,10 +780,6 @@ Forms in the project use basic Django form validation.
 
   ![Wishlist](media/readme/whishlist.png)
 
-- **Manage Products**
-  - Admins can manage products through the manage_products template.
-
-  ![Manage Products](media/readme/admin.png)
 
 ---
 
@@ -805,6 +796,329 @@ Forms in the project use basic Django form validation.
   
 - **Community Forum**  
   - Implement a forum for users to discuss their favorite products, genres, and trends.
+
+  ## Technologies Used
+
+### Languages Used
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Databases Used
+
+- [ElephantSQL](https://www.elephantsql.com/) - Postgres database
+- [AWSAmazon](https://aws.amazon.com/) - Online static and media file storage
+
+### Frameworks Used
+
+- [Django](https://www.djangoproject.com/) - Python framework. Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source. (Source: [Django](https://www.djangoproject.com/))
+- [Bootstrap 5.1](https://getbootstrap.com/docs/5.1/getting-started/introduction//) - CSS framework. Bootstrap is a popular open-source front-end framework that provides a collection of tools, styles, and components to simplify the process of designing and building responsive and mobile-first web pages.
+- [jQuery 3.7.1](https://code.jquery.com/jquery-3.7.1.js) - jQuery is a fast, small, and feature-rich JavaScript library. It simplifies things like HTML document traversal and manipulation, event handling, and animation for web development. jQuery is open-source and designed to make things like HTML document traversal and manipulation, event handling, and animation much simpler with an easy-to-use API that works across a multitude of browsers. (Source: [jQuery](https://api.jquery.com/))
+
+### Payment System
+
+- [Stripe](https://stripe.com/ie) - Stripe is a technology company that provides online payment processing services, allowing businesses to accept payments securely over the internet. It offers a range of tools for handling transactions, subscriptions, and more.
+
+### Programs Used
+
+- [Github](https://github.com/) - Used for creating application repository, version control, organising workflow utilising agile functionality of GitHub project, issues and milestones.
+- [Gitpod](https://www.gitpod.io/) - Used as a coding environment.
+- [Heroku](https://www.heroku.com/) - Used as the cloud-based platform to deploy the site.
+- [Google Fonts](https://fonts.google.com/) - Used for the typography.
+- [Balsamique](https://balsamiq.com/) - Used for creation of wireframes.
+- [DbDiagram](https://dbdiagram.io/) - Used for creation of ERD.
+- [Jinja](https://jinja.palletsprojects.com/en/3.1.x/) - Templating engine
+- [Compress.png](https://compresspng.com/) - Used to reduce the size of images.
+- [favicon.io](https://favicon.io/) - Used to convert images into icons.
+- [JSHint](https://jshint.com/) - Used to validate JavaScript
+- [W3C Markup Validation Service](https://validator.w3.org/) - Used to validate HTML
+- [CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate CSS
+- [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used to validate Python
+
+### Emails and Newsletter
+
+- [Gmail](https://mail.google.com/) - User for email services
+
+### SEO and Marketing
+
+- [XML Sitemaps](https://www.xml-sitemaps.com/) - sitemap generator
+
+## Deployment and Local Development
+
+### Local Development
+
+#### How to Fork
+
+To fork the repository, follow the steps below:
+
+1. Log in to your [GitHub](https://github.com).
+2. Navigate to the repository for this project [Epic Merch](https://github.com/nazar0309/epic_merch)
+3. In the top right corner of the window, click on the Fork button.
+4. The process will start, and you will see the message confirming the start.
+
+Remember that if you forked the repository, none of the updates made to the source repo would be reflected in your forked repo.
+
+#### How to Clone
+
+To bring down project for local development, it is possible to clone a repository by following steps below:
+
+1. Log in(or Sign Up) to [GitHub](https://github.com).
+2. Navigate to the repository for this project [Epic Merch](https://github.com/nazar0309/epic_merch)
+3. Above the list of files, click the green button Code.
+4. Select Local tab.
+5. Copy to HTTPS code.
+6. In your local IDE open terminal, choose the location where you want to clone the directory.
+7. Type `git clone` and then paste the URL you copied from GitHub in step 5.
+8. Set up a virtual environment (not required if you are using the Code Institute template and GitPod or Codeanywhere - this will be already set up).
+9. Press Enter to create the clone.
+10. Install packages by running command `pip3 install -r requirements.txt`
+
+### ElephantSQL Database
+
+1. Login to [ElephantSQL](https://www.elephantsql.com/) PostgreSQL Database.
+2. Click Create New Instance.
+3. Set up your plan:
+    - give your plan name - commonly project name
+    - select Tiny Turtle (Free) plan
+    - you can leave the tags blank
+4. Select the Region and data center near you.
+5. Click Review.
+6. Check your details are correct and then click Create instance.
+7. Return to the ElephantSQL dashboard and click the database name you just created.
+8. In the URL section, click and copy icon to copy the database URL (you will need this for your **env.py** file)
+
+### AWS Amazon
+
+1. Create AWS account and go to AWS Management Console in the My Account dropdown
+2. Find and access S3 as a service and create a new bucket:
+3. Under Object Ownership, check "ACLs enabled"
+4. Uncheck "Block all public access" and acknowledge (required for public access to static files)
+
+5. Configur bucket settings:
+
+    - Under Properties, enable Static Website Hosting
+    - Under Permissions, copy the following code into CORS section:
+
+    <details>
+    <summary> Code snippet.
+    </summary>
+
+    ```javascript
+    [
+        {
+            "AllowedHeaders": [
+                "Authorization"
+            ],
+            "AllowedMethods": [
+                "GET"
+            ],
+            "AllowedOrigins": [
+                "*"
+            ],
+            "ExposeHeaders": []
+        }
+    ]
+    ```
+
+    </details>
+
+    This is required to set up the access between the Heroku app and the S3 bucket.
+
+6. Under Bucket policy, go to Policy generator.
+
+    - Bucket Type = S3 Bucket Policy
+    - Principal = * (allows all principles)
+    - Actions = GetObject
+    - Paste in ARN from bucket settings tab.
+    - Click Add Statement, then Generate Policy.
+    - Copy policy in paste into bucket policy editor. Also add /* onto the end of the resource key.
+    - Click Save.
+    - Under Access control list (ACL), check "List" checkbox for "Everyone (public access)"
+
+7. Create user to access bucket with IAM (Identity and Access Management)
+
+    - In IAM, got to User Groups (sidebar left).
+    - There create a group for a user, create an access policy giving the group access to the S3 bucket and assign the user to the group so it can use the policy to access all files.
+
+8. Connect Django to S3
+
+    - Install packages "boto3" and "django-storages" and add 'storages' to INSTALLED_APPS in settings.py
+    - Configure settings.py accordingly, including necessary AWS variables.
+
+    <details>
+    <summary> Code snippet.
+    </summary>
+
+    ```python
+    # AWS settings
+    if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+    
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'nazar0309'
+    AWS_S3_REGION_NAME = 'eu-north-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_LOCATION = 'static'
+    MEDIAFILES_LOCATION = 'media'
+    STORAGES = {
+    "default": {
+        "BACKEND": "custom_storages.MediaStorage",
+    },
+    "staticfiles": {"BACKEND": "custom_storages.StaticStorage"},
+    }
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+    ```
+
+    </details>
+
+9. Add new config vars in Heroku app settings, including user credentials from AWS.
+10. Create custom_storages.py file.
+11. Upload static files and media files to S3
+12. Add Stripe keys to Heroku
+    - From Stripe account, under Developers > API keys copy Public Key and Secret Key and set as config vars in Heroku app settings.
+    - Create new Webhook endpoint for deployed site and enable all events. Then add Signing Secret to Heroku app config vars.
+
+### Heroku Deployment
+
+- Log into [Heroku](https://www.heroku.com/) account or create an account.
+
+- Click the "New" button at the top right corner and select "Create New App".
+- Enter a unique application name
+- Select your region
+- Click "Create App"
+
+#### Prepare enviroment and settings.py
+
+- In your workspace (GitPod) create an **env.py** file and add it to **.gitignore**
+
+- Add the **DATABASE_URL** value and your chosen **SECRET_KEY** value to the **env.py file**.
+- Update the **settings.py** file to import the **env.py** file and add the SECRET-KEY and DATABASE_URL file paths.
+
+    <details>
+    <summary> See the code sample
+    </summary>
+
+    ```python
+    from pathlib import Path
+    import os
+    import dj_database_url
+    if os.path.isfile('env.py'):
+        import env
+    ```
+
+    </details>
+
+- Comment out the original DATABASES variable and add the code below.
+
+    <details>
+    <summary> See the code sample
+    </summary>
+
+    ```python
+    # DATABASES = {
+    #     'default': {
+    #         'ENGINE': 'django.db.backends.sqlite3',
+    #         'NAME': BASE_DIR / 'db.sqlite3',
+    #     }
+    # }
+        
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
+    ```
+
+    </details>
+
+- Don't forget to makemigrations and migrate to update your database.
+- Add Heroku to the ALLOWED_HOSTS in settings.py
+
+    <details>
+    <summary> See the code sample
+    </summary>
+
+    ```python
+    ALLOWED_HOSTS = [
+    'your-app-name.herokuapp.com/',
+    ]
+    ```
+
+    </details>
+
+- Add the following Config Vars in Heroku:
+  - `SECRET_KEY` (Any Django random secret key).
+  - `PORT` = 8000.
+  - `DISABLE_COLLECTSTATIC` = 1 (temporary and can be removed once static files are created).
+  - `DATABASE_URL` (paste ElephantSQL database URL here).
+  - `STRIPE_SECRET_KEY`
+  - `STRIPE_PUBLIC_KEY`
+  - `STRIPE_WH_SECRET`
+  - `AWS_SECRET_ACCESS_KEY`
+  - `AWS_ACCESS_KEY_ID`
+
+- Heroku Additional Files:
+  - Create requirements.txt
+  - Create Procfile.
+
+    <details>
+    <summary> See the code sample (for gunicorn)
+    </summary>
+
+    ```python
+    web: gunicorn codestar.wsgi
+    ```
+
+    </details>
+
+#### Deploy
+
+1. Before deployment change DEBUG = False in the settings.py, to prevent sharing sensitive information with the public.
+2. Connect to GitHub in the deploy tab on Heroku app, and find your project repository.
+3. At the bottom of the page you can choose Enable Automatic Deploys for automatic deployments or Deploy Branch to deploy manually. Keep in mind that manually deployed branches will need to be re-deployed after each time the GitHub repository is updated.
+4. Click 'Open App' to view the deployed live site.
+
+Site is now live
+
+You can visit the deployed application at [Epic Merch](https://epic-merch-565735eb773a.herokuapp.com/)
+
+## Testing
+
+Please see  [TESTING.md](TESTING.md) for all the detailed testing performed.
+
+## References
+
+### Docs
+
+- [jQuery](https://api.jquery.com/)
+- [Bootstrap 5.1](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+- [Django docs](https://docs.djangoproject.com/en/5.0/)
+- [Django Allauth](https://docs.allauth.org/en/latest/)
+- [Stack Overflow](https://stackoverflow.com/)
+- [GitHub Markdown Cheet Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+### Content
+
+- [Amazon UK](https://www.amazon.co.uk) - all images for the products and content.
+- [OwlBookstore](https://github.com/ObiOne84/project-5-e-commerce) - the structure of the readme file.
+- [Code Institute](https://codeinstitute.net/ie/) - [Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/250e2c2b8e43cccb56b4721cd8a8bd4de6686546) project - for stripe setup, AWS setup, javascript for bag buttons, arrow up scroll and toast styling.
+- [FreePik](https://whttps://www.freepik.com/) - images used for the hero page.
+
+### Acknowledgements
+
+- I am deeply grateful to my mentor, Mitko Bachvarov, for his unwavering support and invaluable feedback throughout the project.
 
 
 
