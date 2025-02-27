@@ -114,6 +114,8 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+
 WSGI_APPLICATION = 'epic_merch.wsgi.application'
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
