@@ -89,9 +89,8 @@ Experience the excitement of securing the perfect gaming gear, knowing that ever
 
 **Epic Merch’s E-commerce Platform** is more than just a store; it's a **gaming paradise** where your love for gaming merchandise thrives. Join us in celebrating gaming culture and indulge in the joy of discovering the best gaming gear available. **Game on!** 🎮  
 
-![Epic Merch Screenshot](/media/screenshots_webp/epic_merch_responsive.webp)  
 
-[Visit Epic Merch Live](#) 🚀  
+[Visit Epic Merch Live](https://epic-merch-565735eb773a.herokuapp.com/) 🚀  
 
 ---  
 
