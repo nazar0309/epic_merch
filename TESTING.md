@@ -207,67 +207,48 @@ Device testing encompassed various devices, including iPhone 12 Pro, iPad, MacBo
 ### JavaScript Validation
 
 <details>
-<summary> Custom JS arrow_up.js
-</summary>
-
-![Arrow Up JS](/media/sreenshots_webp/js_arrow_up.webp)
-</details>
-
-<details>
-<summary> Custom JS bag.js
-</summary>
-
-![Bag JS](/media/sreenshots_webp/js_bag.webp)
-</details>
-
-<details>
-<summary> Custom JS newsletter.js - one unused variable is part of the Mailchimp Newsletter service javascript code.
-</summary>
-
-![Newsletter JS](/media/sreenshots_webp/js_newsletter.webp)
-</details>
-
-<details>
-<summary> Custom JS toast.js
-</summary>
-
-![Toast JS](/media/sreenshots_webp/js_toast.webp)
-</details>
-
-<details>
-<summary> Custom JS profiles.js
-</summary>
-
-![Profiles JS](/media/sreenshots_webp/js_profiles.webp)
-</details>
-
-<details>
-<summary> Custom JS quantity_input_script.js
-</summary>
-
-![Quantity Input JS](/media/sreenshots_webp/js_quantity_input.webp)
-</details>
-
-<details>
-<summary> Custom JS script-product.js
-</summary>
-
-![Product JS](/media/sreenshots_webp/js_script-products.webp)
-</details>
-
-<details>
-<summary> Custom JS sorting.js
-</summary>
-
-![Sorting JS](/media/sreenshots_webp/js_sorting.webp)
-</details>
-
-<details>
 <summary> Custom JS stripe_elements.js
 </summary>
 
-![Stripe Elements JS](/media/sreenshots_webp/js_stripe_elements.webp)
+![Stripe_elements js](/media/readme/stripe_elements_js.png)
 </details>
+
+<details>
+<summary> Custom JS countryfield.js
+</summary>
+
+![Stripe_elements js](/media/readme/countryfield_js.png)
+</details>
+
+<details>
+<summary> Custom JS on bage template
+</summary>
+
+![Stripe_elements js](/media/readme/bag_js.png)
+</details>
+
+<details>
+<summary> Custom JS on homepage
+</summary>
+
+![Stripe_elements js](/media/readme/home_js.png)
+</details>
+
+<details>
+<summary> Custom JS on product_details page
+</summary>
+
+![Stripe_elements js](/media/readme/product_details_js.png)
+</details>
+
+<details>
+<summary> Custom JS on products page
+</summary>
+
+![Stripe_elements js](/media/readme/products_js.png)
+</details>
+
+
 
 ### Python
 
