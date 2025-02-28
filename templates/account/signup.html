@@ -16,12 +16,37 @@
     
     <form class="auth-form" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}
+    
         <div class="form-group text-white">
-            {{ form.as_p }}
+            <label for="{{ form.username.id_for_label }}">Username:</label>
+            {{ form.username }}
+            {% if form.username.help_text %}
+                <small class="text-muted">{{ form.username.help_text }}</small>
+            {% endif %}
         </div>
+    
+        <div class="form-group text-white">
+            <label for="{{ form.email.id_for_label }}">Email:</label>
+            {{ form.email }}
+        </div>
+    
+        <div class="form-group text-white">
+            <label for="{{ form.password1.id_for_label }}">Password:</label>
+            {{ form.password1 }}
+            {% if form.password1.help_text %}
+                <small class="text-white mt-3">{{ form.password1.help_text }}</small>
+            {% endif %}
+        </div>
+    
+        <div class="form-group text-white">
+            <label for="{{ form.password2.id_for_label }}">Confirm Password:</label>
+            {{ form.password2 }}
+        </div>
+    
         {% if redirect_field_value %}
             <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
+        
         <button class="btn-auth" type="submit">{% trans "Sign Up" %}</button>
     </form>
 </div>
