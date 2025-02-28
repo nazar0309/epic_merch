@@ -39,7 +39,9 @@
             <label for="{{ form.password1.id_for_label }}">Password:</label>
             {{ form.password1 }}
             {% if form.password1.help_text %}
-                <p class="text-white mt-3">{{ form.password1.help_text }}</p>
+                <small id="id_password1_helptext" class="text-white mt-3">
+                    {{ form.password1.help_text }}
+                </small>
             {% endif %}
             {% for error in form.password1.errors %}
                 <small class="text-danger">{{ error }}</small>
