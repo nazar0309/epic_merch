@@ -96,9 +96,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn btn-black rounded-0 text-uppercase mt-4" type="submit" style='box-shadow: 0px 0px 15px white;'>
-                                <a class="text-white text-decoration-none" href="{% url 'add_to_wishlist' product.id %}">Add to Wishlist</a>
-                            </button>
+                            <a class="btn btn-black rounded-0 text-uppercase mt-4 text-white text-decoration-none" 
+                                    style="box-shadow: 0px 0px 15px white;" 
+                                    href="{% url 'add_to_wishlist' product.id %}">
+                                    Add to Wishlist
+                            </a>
                             <div class="col-12">
                                 <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
