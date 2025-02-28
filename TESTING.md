@@ -136,7 +136,7 @@ Device testing encompassed various devices, including iPhone 12 Pro, iPad, MacBo
 <summary> Add Product Page
 </summary>
 
-![Add Comic Page](/media/sreenshots_webp/validation_add_comic.webp)
+![Add Product Page](/media/sreenshots_webp/validation_add_comic.webp)
 </details>
 
 <details>
