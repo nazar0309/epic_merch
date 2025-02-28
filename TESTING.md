@@ -87,98 +87,91 @@ Device testing encompassed various devices, including iPhone 12 Pro, iPad, MacBo
 <summary> Home Page
 </summary>
 
-![Home Page](/media/sreenshots_webp/validation_home.webp)
+![Home Page](/media/readme/home_html.png)
 </details>
 
 <details>
 <summary> Products Page
 </summary>
 
-![Products Page](/media/sreenshots_webp/validation_products.webp)
+![Products Page](/media/readme/products_html.png)
 </details>
 
 <details>
 <summary> Products Detail Page
 </summary>
 
-![Product Detail Page](/media/sreenshots_webp/validation_product_details.webp)
+![Product Detail Page](/media/readme/product_details_html.png)
 </details>
 
 <details>
 <summary> Sign Up Page
 </summary>
 
-![Sign Up Page](/media/sreenshots_webp/validation_register.webp)
+![Sign Up Page](/media/readme/sign_up_html.png)
 </details>
 
 <details>
 <summary> Login Page
 </summary>
 
-![Login Page](/media/sreenshots_webp/validation_signin.webp)
+![Login Page](/media/readme/sign_in_html.png)
 </details>
 
 <details>
 <summary> Logout Page
 </summary>
 
-![Logout Page](/media/sreenshots_webp/validation_signout.webp)
+![Logout Page](/media/readme/logout_html.png)
 </details>
 
 <details>
 <summary> Update Product Page
 </summary>
 
-![Update Product Page](/media/sreenshots_webp/validation_update.webp)
+![Update Product Page](/media/readme/edit_product_html.png)
 </details>
 
 <details>
 <summary> Add Product Page
 </summary>
 
-![Add Product Page](/media/sreenshots_webp/validation_add_comic.webp)
+![Add Product Page](/media/readme/add_product_html.png)
 </details>
 
 <details>
 <summary> Bag Page
 </summary>
 
-![Bag Page](/media/sreenshots_webp/validation_bag.webp)
+![Bag Page](/media/readme/bag_html.png)
 </details>
 
 <details>
 <summary> Checkout Page
 </summary>
 
-![Checkout Page](/media/sreenshots_webp/validation_checkout.webp)
+![Checkout Page](/media/readme/checkout_html.png)
 </details>
 
 <details>
 <summary> Checkout Success
 </summary>
 
-![Checkout and Order History Page](/media/sreenshots_webp/validation_checkout_success.webp)
+![Checkout and Order History Page](/media/readme/checkout_success_html.png)
 </details>
 
 <details>
 <summary> My Profile Page
 </summary>
 
-![My Profile Page](/media/sreenshots_webp/validation_myprofile.webp)
+![My Profile Page](/media/readme/profile_html.png)
 </details>
 
 <details>
 <summary> Contact Us Page
 </summary>
 
-![Contact Us Page](/media/sreenshots_webp/validation_contact_us.webp)
-</details>
-
-<details>
-<summary> Error 404 Page
-</summary>
-
-![Error 404 Page](/media/sreenshots_webp/validation_error404.webp)
+![Contact Us Page](/media/readme/contact_us_html.png)
 </details>
 
 ### CSS Validation
@@ -187,21 +180,28 @@ Device testing encompassed various devices, including iPhone 12 Pro, iPad, MacBo
 <summary> Custom CSS - base.css
 </summary>
 
-![Base css](/media/sreenshots_webp/validation_css_base.webp)
+![Base css](/media/readme/base_css.png)
 </details>
 
 <details>
 <summary> Custom CSS - profile.css
 </summary>
 
-![Profile css](/media/sreenshots_webp/validation_css_profile.webp)
+![Profile css](/media/readme/profile_css.png)
 </details>
 
 <details>
 <summary> Custom CSS - checkout.css
 </summary>
 
-![Checkout css](/media/sreenshots_webp/validation_css_checkout.webp)
+![Checkout css](/media/readme/checkout_css.png)
+</details>
+
+<details>
+<summary> Custom CSS - add_product
+</summary>
+
+![Add_product css](/media/readme/add_product_css.png)
 </details>
 
 ### JavaScript Validation
