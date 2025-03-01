@@ -835,7 +835,7 @@ Forms in the project use basic Django form validation.
 - [JSHint](https://jshint.com/) - Used to validate JavaScript
 - [W3C Markup Validation Service](https://validator.w3.org/) - Used to validate HTML
 - [CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate CSS
-- [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used to validate Python
+- [CI Python Linter](https://pep8ci.herokuapp.com/) - Used to validate Python
 
 ### Emails and Newsletter
 

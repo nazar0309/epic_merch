@@ -217,35 +217,35 @@ Device testing encompassed various devices, including iPhone 12 Pro, iPad, MacBo
 <summary> Custom JS countryfield.js
 </summary>
 
-![Stripe_elements js](/media/readme/countryfield_js.png)
+![Countryfield js](/media/readme/countryfield_js.png)
 </details>
 
 <details>
-<summary> Custom JS on bage template
+<summary> Custom JS on bag template
 </summary>
 
-![Stripe_elements js](/media/readme/bag_js.png)
+![Bag js](/media/readme/bag_js.png)
 </details>
 
 <details>
 <summary> Custom JS on homepage
 </summary>
 
-![Stripe_elements js](/media/readme/home_js.png)
+![Homepage js](/media/readme/home_js.png)
 </details>
 
 <details>
 <summary> Custom JS on product_details page
 </summary>
 
-![Stripe_elements js](/media/readme/product_details_js.png)
+![Product_details js](/media/readme/product_details_js.png)
 </details>
 
 <details>
 <summary> Custom JS on products page
 </summary>
 
-![Stripe_elements js](/media/readme/products_js.png)
+![Products js](/media/readme/products_js.png)
 </details>
 
 
@@ -255,240 +255,165 @@ Device testing encompassed various devices, including iPhone 12 Pro, iPad, MacBo
 #### bag app
 
 <details>
-<summary> context.py
-</summary>
+<summary> context.py </summary>
 
-![context.py](/media/sreenshots_webp/py_bag_context.webp)
+![context.py](/media/readme/py_1.png)
 </details>
 
 <details>
-<summary> bag_tools.py
-</summary>
+<summary> bag_tools.py </summary>
 
-![bag_tools.py](/media/sreenshots_webp/py_bag_tools.webp)
+![bag_tools.py](/media/readme/py_2.png)
 </details>
 
 <details>
-<summary> urls.py
-</summary>
+<summary> urls.py </summary>
 
-![urls.py](/media/sreenshots_webp/py_bag_urls.webp)
+![urls.py](/media/readme/py_3.png)
 </details>
 
 <details>
-<summary> views.py
-</summary>
+<summary> views.py </summary>
 
-![views.py](/media/sreenshots_webp/py_bag_views.webp)
-</details>
-
-#### wishlist app
-
-<details>
-<summary> models.py
-</summary>
-
-![models.py](/media/sreenshots_webp/wishlist_models.webp)
-</details>
-
-<details>
-<summary> views.py
-</summary>
-
-![views.py](/media/sreenshots_webp/wishlist_views.webp)
-</details>
-
-<details>
-<summary> signals.py
-</summary>
-
-![signals.py](/media/sreenshots_webp/wishlist_signals.webp)
-</details>
-
-<details>
-<summary> urls.py
-</summary>
-
-![urls.py](/media/sreenshots_webp/wishlist_urls.webp)
+![views.py](/media/readme/py_4.png)
 </details>
 
 #### checkout app
 
 <details>
-<summary> admin.py
-</summary>
+<summary> admin.py </summary>
 
-![admin.py](/media/sreenshots_webp/py_checkout_admin.webp)
+![admin.py](/media/readme/py_5.png)
 </details>
 
 <details>
-<summary> forms.py
-</summary>
+<summary> forms.py </summary>
 
-![forms.py](/media/sreenshots_webp/py_checkout_forms.webp)
+![forms.py](/media/readme/py_6.png)
 </details>
 
 <details>
-<summary> models.py
-</summary>
+<summary> models.py </summary>
 
-![models.py](/media/sreenshots_webp/py_checkout_modles.webp)
+![models.py](/media/readme/py_7.png)
 </details>
 
 <details>
-<summary> signals.py
-</summary>
+<summary> signals.py </summary>
 
-![signals.py](/media/sreenshots_webp/py_checkout_signals.webp)
+![signals.py](/media/readme/py_8.png)
 </details>
 
 <details>
-<summary> urls.py
-</summary>
+<summary> urls.py </summary>
 
-![urls.py](/media/sreenshots_webp/py_checkout_urls.webp)
+![urls.py](/media/readme/py_9.png)
 </details>
 
 <details>
-<summary> views.py
-</summary>
+<summary> views.py </summary>
 
-![views.py](/media/sreenshots_webp/py_checkout_views.webp)
+![views.py](/media/readme/py_10.png)
 </details>
 
 <details>
-<summary> webhooks.py
-</summary>
+<summary> webhooks.py </summary>
 
-![webhooks.py](/media/sreenshots_webp/py_checkout_wh.webp)
+![webhooks.py](/media/readme/py_11.png)
 </details>
 
 <details>
-<summary> webhook_handler.py
-</summary>
+<summary> webhook_handler.py </summary>
 
-![webhook_handler.py](/media/sreenshots_webp/py_checkout_wh_handler.webp)
+![webhook_handler.py](/media/readme/py_12.png)
 </details>
 
 #### home app
 
 <details>
-<summary> forms.py
-</summary>
+<summary> urls.py </summary>
 
-![forms.py](/media/sreenshots_webp/py_home_forms.webp)
+![urls.py](/media/readme/py_25.png)
 </details>
 
 <details>
-<summary> urls.py
-</summary>
+<summary> views.py </summary>
 
-![urls.py](/media/sreenshots_webp/py_home_urls.webp)
-</details>
-
-<details>
-<summary> views.py
-</summary>
-
-![views.py](/media/sreenshots_webp/py_home_views.webp)
+![views.py](/media/readme/py_13.png)
 </details>
 
 #### products app
 
 <details>
-<summary> admin.py
-</summary>
+<summary> admin.py </summary>
 
-![admin.py](/media/sreenshots_webp/py_products_admin.webp)
+![admin.py](/media/readme/py_14.png)
 </details>
 
 <details>
-<summary> forms.py
-</summary>
+<summary> forms.py </summary>
 
-![forms.py](/media/sreenshots_webp/py_products_forms.webp)
+![forms.py](/media/readme/py_15.png)
 </details>
 
 <details>
-<summary> models.py
-</summary>
+<summary> models.py </summary>
 
-![models.py](/media/sreenshots_webp/py_products_models.webp)
+![models.py](/media/readme/py_16.png)
 </details>
 
 <details>
-<summary> test_views.py
-</summary>
+<summary> urls.py </summary>
 
-![test_views.py](/media/sreenshots_webp/py_products_test_views.webp)
+![urls.py](/media/readme/py_17.png)
 </details>
 
 <details>
-<summary> urls.py
-</summary>
+<summary> views.py </summary>
 
-![urls.py](/media/sreenshots_webp/py_products_urls.webp)
-</details>
-
-<details>
-<summary> views.py
-</summary>
-
-![views.py](/media/sreenshots_webp/py_products_views.webp)
+![views.py](/media/readme/py_18.png)
 </details>
 
 #### profiles app
 
 <details>
-<summary> admin.py
-</summary>
+<summary> forms.py </summary>
 
-![admin.py](/media/sreenshots_webp/py_profiles_admin.webp)
+![forms.py](/media/readme/py_19.png)
 </details>
 
 <details>
-<summary> forms.py
-</summary>
+<summary> models.py </summary>
 
-![forms.py](/media/sreenshots_webp/py_profiles_forms.webp)
+![models.py](/media/readme/py_20.png)
 </details>
 
 <details>
-<summary> models.py
-</summary>
+<summary> urls.py </summary>
 
-![models.py](/media/sreenshots_webp/py_profiles_models.webp)
+![urls.py](/media/readme/py_21.png)
 </details>
 
 <details>
-<summary> urls.py
-</summary>
+<summary> views.py </summary>
 
-![urls.py](/media/sreenshots_webp/py_profiles_urls.webp)
+![views.py](/media/readme/py_22.png)
+</details>
+
+### epic_merch project
+
+<details>
+<summary> urls.py </summary>
+
+![urls.py](/media/readme/py_23.png)
 </details>
 
 <details>
-<summary> views.py
-</summary>
+<summary> settings.py - line too long, django-allauth password validation code </summary>
 
-![views.py](/media/sreenshots_webp/py_profiles_views.webp)
+![settings.py](/media/readme/py_24.png)
 </details>
 
-### owl_bookstore project
-
-<details>
-<summary> urls.py
-</summary>
-
-![urls.py](/media/sreenshots_webp/py_urls.webp)
-</details>
-
-<details>
-<summary> settings.py - line too long, django-allauth password validation code
-</summary>
-
-![settings.py](/media/sreenshots_webp/py_settings.webp)
-</details>
 
 ## Lighthouse Report
 
