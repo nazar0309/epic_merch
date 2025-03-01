@@ -501,3 +501,188 @@ LightHouse can cot access it because it`s private page
 
 ![Login Page](/media/readme/lt_404.png)
 </details>
+
+## Bugs
+
+### Resolved Bugs
+
+#### Confirmation Email Not Sent to Users After Checkout
+
+* After a successful purchase, some authenticated users did not receive a confirmation email, whereas guest users received it correctly. The issue was caused by incorrect handling of the email field in the checkout function. The issue was fixed by ensuring that the email is properly fetched and used in the send_mail function.
+
+<details>
+<summary> Code changes
+</summary>
+
+    ```python
+    # checkout/views.py
+    user_email = order.email
+    send_mail(
+        subject, message, settings.DEFAULT_FROM_EMAIL, [user_email],
+        fail_silently=False,
+    )
+
+```
+
+</details>
+
+#### Superusers Unable to Add Products
+
+* Superusers attempting to add products encountered validation errors despite filling out the form correctly. The issue was due to missing error handling in the add_product function when processing form files. The issue was resolved by improving error messages and ensuring that file handling was properly included in form validation.
+
+<details>
+<summary> Code changes
+</summary>
+
+    ```python
+
+    # products/views.py
+    form = ProductForm(request.POST, request.FILES)  # Ensure file uploads are processed
+    if form.is_valid():
+        product = form.save()
+        messages.success(request, 'Successfully added product!')
+
+```
+
+</details>
+
+#### Duplicate Newsletter Subscriptions
+
+* Users were able to subscribe multiple times to the newsletter despite the email field being unique. The issue was caused by duplicate models handling newsletter subscriptions (NewsletterSubscriber and Subscriber). The issue was resolved by consolidating the models and enforcing validation at the form level.
+
+<details>
+<summary> Code changes
+</summary>
+
+```python
+
+        # models.py
+    class Subscriber(models.Model):
+        email = models.EmailField(unique=True)  # Enforce uniqueness
+        subscribed_at = models.DateTimeField(auto_now_add=True)
+
+```
+
+</details>
+
+#### JavaScript Payment Form Validation Errors
+
+* When filling out the payment form, users encountered JavaScript errors related to the card.addEventListener function. The issue was caused by an incorrect reference to the card-errors element. The issue was fixed by ensuring the correct selection of the error message container.
+
+<details>
+<summary> Code changes
+</summary>
+
+```javascript
+
+// checkout/static/js/stripe_elements.js
+var errorDiv = document.getElementById('card-errors');
+if (event.error) {
+    var html = `
+        <span class="icon" role="alert">
+            <i class="fas fa-times"></i>
+        </span>
+        <span>${event.error.message}</span>
+    `;
+    $(errorDiv).html(html); // Ensure correct reference
+}
+
+```
+
+</details>
+
+#### Deployment Issues
+
+* The project failed to deploy due to missing environment variables for Stripe payment integration. The issue was fixed by ensuring that all required environment variables were set in the hosting platform.
+
+<details>
+<summary> Stripe keys error
+</summary>
+
+# .env
+STRIPE_PUBLIC_KEY=your_public_key_here
+STRIPE_SECRET_KEY=your_secret_key_here
+</details>
+
+#### **HTML Validation Errors**
+When testing HTML code, some validation errors were displayed:
+
+- `<div>` elements containing incorrect `aria-*` attributes (resolved by replacing with valid attributes).
+- `<div>` elements containing `href` attributes (resolved by replacing with `data-bs-target`).
+- `<div>` elements containing `tabindex` attributes (resolved by removing the attribute).
+- `<input>` elements containing `unchecked` attributes (resolved by removing the attribute).
+- Incorrect heading order (fixed by following a descending heading order).
+- Warnings for `<script>` tags with unnecessary `type="text/javascript"` attributes (fixed by removing the attribute).
+- `<ul>` elements containing `aria-labelledby` attributes not linked to describing elements (replaced with `title` attributes).
+- `<div>` elements containing `aria-label` attributes (fixed by replacing with `title` attributes).
+- `<a>` elements nested in `<li>` elements containing `aria-label` attributes (fixed by replacing with `title` attributes).
+- `<input>` elements described by `aria-describedby` attributes (fixed by replacing with `title` attributes).
+
+```html 
+
+#### Python Validation Erros
+
+* Line too long, reduce the lenght of the characters per line
+* White spaces trailing, removed empty spaces
+* One empty line when two needed, added additional line
+* context.py error
+
+    <details>
+    <summary> Context Error
+    </summary>
+        Error: Attempted to use `wishlist_items` without checking if the user is authenticated.
+    </details>
+
+    <details>
+    <summary> Solution
+    </summary>
+
+    bag/context.py
+
+    ```python
+
+        # wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+        # wishlist_items = request.user.wishlist.items.all()
+        if request.user.is_authenticated:
+            wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+            wishlist_items = request.user.wishlist.items.all()
+        else:
+            wishlist_items = 0
+
+    ```
+
+    </details>
+
+* checkout/views.py error
+
+    <details>
+    <summary> Context Error
+    </summary>
+         In the `checkout/views.py`, the following code had a missing implementation to properly process the order. The updated solution is as follows.
+    </details>
+    <details>
+    <summary> Solution
+    </summary>
+
+    ```python
+
+    if order_form.is_valid():
+        order = order_form.save(commit=False)
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        # order.stipe_pid = pid
+        order.stripe_pid = pid
+        order.original_bag = json.dumps(bag)
+        order.save()
+        for item_id, quantity in bag.items():
+    ```
+
+    </details>
+
+#### Javascript Validation Erros
+
+* missing `;`, fixed by adding missing elements
+* blankspaces, fixed by deleting them
+
+### Unresolved Bug
+
+#### None
