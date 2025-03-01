@@ -686,3 +686,39 @@ When testing HTML code, some validation errors were displayed:
 ### Unresolved Bug
 
 #### None
+
+## Features Testing
+
+| Page          | User Action   | Expected Result  | Notes            |
+|---------------|---------------|------------------|------------------|
+| Home Page  | Nav Bar  |  |  |
+|               | Hover over Navigation bar and Footer elements | Change colour/add border | PASS |
+|               | Click on Logo/Home button | Redirect to Home Page | PASS        |
+|               | Click on Register - Navigation Bar | Redirect to Sign Up page | PASS |
+|               | Click on View Products button - Hero Section | Redirect to Products page | PASS |
+|               | Click on All Products - By Price | Redirects to Products and sort by price in ascending order | PASS |
+|               | Click on All Products - By Rating | Redirects to Products and sort by rating in descending order | PASS |
+|               | Click on All Products - By Category | Redirects to Products and sort by category in ascending order | PASS |
+|               | Click on All Products - All Products | Redirects to Products | PASS |
+|               | Click on Headphones | Opens submenu with headphones categories | PASS |
+|               | Click on Keyboards | Opens submenu with keyboards categories | PASS |
+|               | Click on Gaming mouses | Opens submenu with gaming mouses categories | PASS |
+|               | Click on Razer | Opens submenu with razer products | PASS |
+|               | Click on HyperX | Opens submenu with hyperx products | PASS |
+|               | Click on Steel Series | Opens submenu with steel series products | PASS |
+|               | Click on Cart | Redirects to cart | PASS |
+|               | Click on My Account | Opens submenu | PASS |
+|               | Click on My Account - Login | Redirects to login page | PASS |
+|               | Click on My Account - Register | Redirects to signup page | PASS |
+|               | When logged |  |  |
+|               | Click on Logout | Redirects to logout page | PASS |
+|               | Click on My Account - My Profile | Redirect to My Profile Page | PASS |
+|               | When logged - admin |  |  |
+|               | Hover Over My Account - Product Management | Redirects to add product page | PASS |
+|               | Banner | Free delivery| PASS |
+| Home Page | Footer |  |  |
+
+
+- - -
+
+Return to [README](README.md)
