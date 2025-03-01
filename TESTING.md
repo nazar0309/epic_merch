@@ -423,145 +423,81 @@ Most common issue affecting performance was AWS loading time, HTTP1 protocol and
 <summary> Home Page
 </summary>
 
-![Home Page](/media/sreenshots_webp/lighthouse_home.webp)
-</details>
-
-<details>
-<summary> About Us Page
-</summary>
-
-![About Us Page](/media/sreenshots_webp/lighthouse_about_us.webp)
-</details>
-
-<details>
-<summary> Wishlist Page
-</summary>
-
-![Wishlist Page](/media/sreenshots_webp/lighthouse_wishlist.webp)
-</details>
-
-<details>
-<summary> Privacy Page
-</summary>
-
-![Privacy Page](/media/sreenshots_webp/lighthouse_privacy.webp)
+![Home Page](/media/readme/lt_home.png)
 </details>
 
 <details>
 <summary> Contact Us Page
 </summary>
 
-![Contact Us Page](/media/sreenshots_webp/lighthouse_contact_us.webp)
-</details>
-
-<details>
-<summary> FAQ Page
-</summary>
-
-![FAQ Page](/media/sreenshots_webp/lighthouse_faq.webp)
+![Contact Us Page](/media/readme/lt_contact_us.png)
 </details>
 
 <details>
 <summary> Products Page
 </summary>
 
-![Products Page](/media/sreenshots_webp/lighthouse_products.webp)
+![Products Page](/media/readme/lt_products.png)
 </details>
 
 <details>
 <summary> Product Details Page
 </summary>
 
-![Product Details Page](/media/sreenshots_webp/lighthouse_product_details.webp)
-</details>
-
-<details>
-<summary> Add Book Page
-</summary>
-
-![Add Book Page](/media/sreenshots_webp/lighthouse_add_book.webp)
-</details>
-
-<details>
-<summary> Add Comic Page
-</summary>
-
-![Add Comic Page](/media/sreenshots_webp/lighthouse_add_comic.webp)
-</details>
-
-<details>
-<summary> Update Product Page
-</summary>
-
-![Update Product Page](/media/sreenshots_webp/lighthouse_update_product.webp)
+![Product Details Page](/media/readme/lt_product_details.png)
 </details>
 
 <details>
 <summary> Bag Page
 </summary>
 
-![Bag Page](/media/sreenshots_webp/lighthouse_bag.webp)
+![Bag Page](/media/readme/lt_bag.png)
 </details>
 
 <details>
 <summary> Checkout Page
 </summary>
-
-![Checkout Page](/media/sreenshots_webp/lighthouse_checkout.webp)
+LightHouse can cot access it because it`s private page
 </details>
 
 <details>
 <summary> Checkout Success/Order History Page
 </summary>
 
-![Checkout Success/Order History Page](/media/sreenshots_webp/lighthouse_order_history.webp)
+LightHouse can cot access it because it`s private page
 </details>
 
 <details>
 <summary> Profile Page
 </summary>
 
-![Profile Page](/media/sreenshots_webp/lighthouse_profile.webp)
+LightHouse can cot access it because it`s private page
 </details>
 
 <details>
 <summary> Sign Up Page
 </summary>
 
-![Sign Up Page](/media/sreenshots_webp/lighthouse_register.webp)
+![Sign Up Page](/media/readme/lt_sign_up.png)
 </details>
 
 <details>
 <summary> Login Page
 </summary>
 
-![Login Page](/media/sreenshots_webp/lighthouse_login.webp)
+![Login Page](/media/readme/lt_sign_in.png)
 </details>
 
 <details>
 <summary> Logout Page
 </summary>
 
-![Logout Page](/media/sreenshots_webp/lighthouse_logout.webp)
+LightHouse can cot access it because it`s private page
 </details>
 
 <details>
-<summary> Change Password Page
+<summary> 404 page
 </summary>
 
-![Change Password Page](/media/sreenshots_webp/lighthouse_password_change.webp)
-</details>
-
-<details>
-<summary> Reset Password Page
-</summary>
-
-![Reset Password Page](/media/sreenshots_webp/lighthouse_password_reset.webp)
-</details>
-
-<details>
-<summary> Update Email Page
-</summary>
-
-![Update Email Page](/media/sreenshots_webp/lighthouse_email_update.webp)
+![Login Page](/media/readme/lt_404.png)
 </details>
