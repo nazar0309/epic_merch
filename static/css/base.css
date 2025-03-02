@@ -46,10 +46,7 @@ i {
 }
 
 .navbar-brand:hover {
-    color: #A0A0A0;
-}
-.grey-hoover:hover {
-    color: #A0A0A0;
+    color: #A0A0A0 !important;
 }
 
 /* Link color in the navbar */
@@ -59,7 +56,7 @@ i {
 
 /* Hover effect for the links */
 .navbar-nav .nav-link:hover {
-    color: #A0A0A0; /* Bright blue when hovered */
+    color: #A0A0A0 !important; /* Bright blue when hovered */
 }
 
 /* Background color for dropdown menus */
