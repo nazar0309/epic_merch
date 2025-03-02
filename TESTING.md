@@ -717,6 +717,116 @@ When testing HTML code, some validation errors were displayed:
 |               | Hover Over My Account - Product Management | Redirects to add product page | PASS |
 |               | Banner | Free delivery| PASS |
 | Home Page | Footer |  |  |
+|               | Click on Instagram icon | Open a new tab with Instagram | PASS |
+|               | Click on Facebook icon | Open a new tab with Facebook | PASS |
+|               | Click on Twitter icon | Open a new tab with Twitter | PASS |
+|               | Click on About Us | Open about us page | PASS |
+|               | Click on Contact Us | Open contact us page | PASS |
+| Sign Up Page  |                  |                  |                  |
+|               | Enter not valid email | Form will not submit, request valid email format | PASS |
+|               | Enter valid email | No request | PASS |
+|               | No email provided | Form will not submit, error displayed | PASS |
+|               | Type invalid password | Error will inform user about incorrect password | PASS |
+|               | Type valid password | Form will submit | PASS |
+|               | Type different second password | Form will not submit, error will inform about incorrect password | PASS |
+|               | Click Sign Up when form is blank | Required form fields message appears | PASS |
+|               | Click Sign In | Redirect to Login page | PASS |
+|               | Provide all correct information and click Sign Up | Account is created, user is redirected to confirm email page and success message appears | PASS |
+| Login Page  |                  |                  |                  |
+|               | Click on Sign Up | Redirect to Sign Up page | PASS |
+|               | Try invalid username | Username is not correct | PASS |
+|               | Try invalid password | Password is not correct | PASS |
+|               | Valid password and username | User is logged in and success message displayed | PASS |
+|               | Click Sign In when form is blank | Required form fields message appears | PASS |
+| Logout Page  |                  |                  |                  |
+|               | Click on Logout button | Opens logout confirmation page | PASS |
+|               | Click on Logout button | User is logged out, success message appears, redirects to home page | PASS |
+| Browse Products Page (All User) |                  |                  |                  |
+|               | Click on product image | Redirects to product details page | PASS |
+|               | Click on category name | Show all products in the category | PASS |
+|               | Click on select Qty | Opens select box with numbers in range of 1 to 10 | PASS |
+|               | Click on Add to bag button| If no number selected, displays error message | PASS |
+|               | Click on Add to bag button| If number selected, add product to the bag, confirmation message display bag content | PASS |
+| Browse Product Details Page (All User) |  |  |  |
+|               | Click on product image| Opens products image in a new tab | PASS |
+|               | Click on Add to Whichlist to add product to wishlist | Product is added to wishlist, heart color fill is red | PASS |
+display bag content | PASS |
+|               | Click on Add to bag button | If total number of the same product more than 10, display error message with feedback | PASS |
+|               | Manually enter number |If number outside the range of 1 to 10, validation error | PASS |
+|               | Edit Product - Admin Only | Redirects to update product page | PASS |
+|               | Delete Product - Admin Only | Opens confirmation modal | PASS |
+|               | Delete Product - Admin Only, confirm modal | Product is deleted permanently | PASS |
+| Search Box |  |  |  |
+|               | Enter product name in the search box | Product exists, success message and product displays below | PASS |
+|               | Enter partial product name in the search box | Product exists, success message and product displays below | PASS |
+|               | Enter product name in the search box | Product does not exist, error message and redirects to all products | PASS |
+|               | Enter partial product name in the search box | Product does not exist, error message and redirects to all products | PASS |
+| Pagination |  |  |  |
+|               | Click on the Next button | Redirect to the next page | PASS |
+|               | Click on the Prev button | Redirect to the previous page | PASS |
+|               | Click on the page number | Redirect to the page with that number | PASS |
+| Bag |  |  |  |
+|  | Click increment product qty | Qty number increases up to 10 | PASS |
+|  | Click decrement product qty | Qty number decreases up to 1 | PASS |
+|  | Click update button | Product qty updates, success message page refresh | PASS |
+|  | Click delete button | Product deleted from bag, success message, page refresh | PASS |
+|  | Enter less than 0 or more than 10 | Error message appear when update product qty button is clicked | PASS |
+|  | Update product qty | Total product qty and bag totals update | PASS |
+|  | Bag value more than $50 | Bag total updates (no delivery charge) | PASS |
+|  | Click Keep Shopping Button| Redirects to products page | PASS |
+|  | Click Checkout Button| Redirects to checkout page | PASS |
+| Checkout Page (Guest) |  |  |  |
+|               | Fill all required information | Payment is processed, success message, redirect to order confirmation page | PASS |
+|               | Missing form values | Validation form errors | PASS |
+|               | Correct payment details | Payment is processed, success message, redirect to order confirmation page | PASS |
+|               | Incorrect payment details | Payment is not processed, validation error | PASS |
+|               | Order Summary - Click product name | More details dispalyed about the product | PASS |
+| Checkout Page (Registered User) |  |  |  |
+|               | On load - form contains save information if saved in user profile |  | PASS |
+|               | User check save info (personal details) | Personal details are saved to user profile | PASS |
+| Order Confirmation |  |  |  |
+|  | After purchase | Display order details | PASS |
+|  | After purchase | Sends confirmation email | PASS |
+|  | Click keep shopping button | Redirects to products page | PASS |
+| My Profile |  |  |  |
+|  | Click on Default Delivery Info tab | Opens update information form, displays saved information | PASS |
+|  | Click Update Information | Updates users information, success message | PASS |
+|  | Click Order Number | Redirects to order history page, info message | PASS |
+|  | Click Update Email | Redirects to update email page | PASS |
+|  | Click Add Email | Email added to user's emails - unverifed, verify email sent, success message displayed | PASS |
+|  | Whishlist | Shows user`s whishlist | PASS |
+|  | delete fromWhishlist | romoves product from whishlist  | PASS |
+
+| Add Product Page |  |  |  |
+|               | Add product with missing required field | Form validation error - this field is required, error message | PASS |
+|               | Add product with all valid required field | Form submitted, product added to database, success message | PASS |
+|               | Click Cancel | Cancel, and redirect to products page | PASS |
+| Newsletter Form |  |  |  |
+|  | Enter valid email and click subscribe |  Form is submitted, confirmation message displayed  |  |
+|  | Enter invalid email and click subscribe |  Form is not submitted, validation error displayed |  |
+|  | Enter email already subscribed and click subscribe |  Form is not submitted, info message email already register |  |
+| Update Product Page |  |    |    |
+|               | As per Add Product page | All test as for add product page | PASS |
+|               | Existing fields content | All content displays correctly | PASS |
+|               | Change Existing fields content | All content can be modified | PASS |
+| Admin Panel |  |    |    |
+|               | Add Products | Admin can add products | PASS |
+|               | Add Category | Admin can add category | PASS |
+|               | Edit product | Admin can edit product | PASS |
+|               | Edit Category | Admin can edit category | PASS |
+|               | CRUD Review | Admin can read, add, edit and delete reviews | PASS |
+|               | Delete Products | Admin can delete one or selected reviews | PASS |
+|               | Filter/Sort Products | Admin can filter/sort products | PASS |
+|               | Search Product | Admin can search product | PASS |
+|               | Manage Order | Admin can manage orders | PASS |
+|               | Manage Accounts | Admin can manage accounts | PASS |
+|               | Manage Profiles | Admin can manage profiles | PASS |
+| Error 404 |  |    |    |
+|               | Enter incorrect url | Custom error 404 dispalyed | PASS |
+
+- - -
+
+Return to [README](README.md)
 
 
 - - -
