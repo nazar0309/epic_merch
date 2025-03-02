@@ -1,13 +1,11 @@
 {% load static %}
 {% url 'home' as home_url %}
 {% url 'products' as home_url %}
-{% url 'user_profile' as profile_url%}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 {% url 'view_bag' as bag_url %}
 {% url 'contact_us' as contact_url %}
-{% url 'profile' as profile_url %}
 {% url 'profile' as profile_url %}
 {% url 'subscribe_newsletter' as 'subscribe_newsletter_url' %}
 
@@ -146,21 +144,21 @@
                             {% if user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <li class="nav-item">
-                                        <a href="{% url 'add_product' %}" class="nav-link text-light text-center">Product Management</a>
+                                        <a href="{% url 'add_product' %}" class="grey-hoover nav-link text-light text-center">Product Management</a>
                                     </li>
                                 {% endif %}
                                 <li class="nav-item">
                                     <a class="nav-link text-light text-center" href="{% url 'profile' %}">{{user.username}}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                                    <a class="nav-link text-light grey-hoover {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
                                 </li>
                             {% else %}
                                 <li class="nav-item">
-                                    <a class="nav-link text-light {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}">Register</a>
+                                    <a class="nav-link text-light grey-hoover {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}">Register</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+                                    <a class="nav-link text-light grey-hoover {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
                                 </li>
                             {% endif %}
                             <li class="nav-item">
@@ -220,7 +218,7 @@
                         <li><a href="{% url 'home' %}" class="text-light">Home</a></li>
                         <li><a href="{% url 'products' %}" class="text-light">Products</a></li>
                         {% if user.is_authenticated %}
-                        <li><a href="{% url 'user_profile' %}" class="text-light">{{ user.username }}</a></li>
+                        <li><a href="{% url 'profile' %}" class="text-light">{{ user.username }}</a></li>
                         <li><a href="{% url 'account_logout' %}" class="text-light">Logout</a></li>
                         {% else %}
                         <li><a href="{% url 'account_login' %}" class="text-light">Login</a></li>
@@ -242,8 +240,8 @@
                 <!-- Contact Information -->
                 <div class="col-12 col-md-3 d-flex flex-column align-items-center align-items-md-start justify-content-center text-center text-md-start">
                     <h5>Contact Us</h5>
-                    <p>Email: info@gg.com</p>
-                    <p>Phone: +123 456 789</p>
+                    <p>Email: nazartsuper0309@gmail.com</p>
+                    <p>Phone: +353877470031</p>
                 </div>
             </div>
     
@@ -252,7 +250,8 @@
             <!-- Copyright Row -->
             <div class="row">
                 <div class="col text-center mt-2">
-                    <p>&copy; 2024 Epic Merch - All Rights Reserved</p>
+                    <p>&copy; 2025 Epic Merch - All Rights Reserved</p>
+                    <p>Created by Nazar Tsuper</p>
                 </div>
             </div>
         </div>

@@ -48,6 +48,9 @@ i {
 .navbar-brand:hover {
     color: #A0A0A0;
 }
+.grey-hoover:hover {
+    color: #A0A0A0;
+}
 
 /* Link color in the navbar */
 .navbar-nav .nav-link {
