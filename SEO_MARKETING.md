@@ -1,4 +1,4 @@
-# Pro Gaming Gear | SEO and Marketing
+# Epic Merch | SEO and Marketing
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@
 
 ## Introduction
 
-**Pro Gaming Gear** specializes in high-performance **gaming keyboards, mice, and headphones** for gamers, streamers, and esports professionals. Our mission is to provide **top-tier peripherals** that enhance gaming performance, comfort, and style.
+**Epic Merch** specializes in high-performance **gaming keyboards, mice, and headphones** for gamers, streamers, and esports professionals. Our mission is to provide **top-tier peripherals** that enhance gaming performance, comfort, and style.
 
 ### 1. Objectives
 
@@ -44,7 +44,7 @@
 
 ### Business and Marketing Plan for Pro Gaming Gear
 
-**Pro Gaming Gear** is an e-commerce platform focusing on gaming keyboards, mice, and headphones. Our marketing strategy leverages **SEO, influencer partnerships, and community engagement** to drive sales.
+**Epic Merch** is an e-commerce platform focusing on gaming keyboards, mice, and headphones. Our marketing strategy leverages **SEO, influencer partnerships, and community engagement** to drive sales.
 
 #### 1. Competitive Analysis
 
