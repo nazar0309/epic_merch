@@ -132,10 +132,7 @@ def checkout_success(request, order_number):
                 user_profile_form.save()
 
     subject = "Thank you for your purchase!"
-    if request.user.is_authenticated:
-        user_email = request.user.email
-    else:
-        user_email = order.email
+    user_email = order.email
     profile_url = request.build_absolute_uri('/profile/')
     message = (
         f"Thank you for your purchase, {user_email}.\n\n"
