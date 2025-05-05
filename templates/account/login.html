@@ -12,16 +12,30 @@
         {% endblocktrans %}
     </p>
 
-    <form class="auth-form" method="POST" action="{% url 'account_login' %}">
+    <form class="auth-form" method="post" action="{% url 'account_login' %}">
         {% csrf_token %}
-        <div class="form-group">
-            {{ form.as_p }}
-        </div>
+
+        {{ form.non_field_errors }}
+
+        {% for hidden in form.hidden_fields %}
+            {{ hidden }}
+        {% endfor %}
+
+        {% for field in form.visible_fields %}
+            <div class="form-group text-white">
+                {{ field.label_tag }}
+                {{ field }}
+                {% for error in field.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
         {% if redirect_field_value %}
-            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
         {% endif %}
-        <button class="btn-auth" type="submit">{% trans "Sign In" %}</button>
+
+        <button type="submit" class="btn-auth">{% trans "Sign In" %}</button>
     </form>
 </div>
 {% endblock %}
-

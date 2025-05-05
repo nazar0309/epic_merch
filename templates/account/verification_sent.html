@@ -2,9 +2,17 @@
 
 {% block content %}
     <div class="center-block">
-        <div class ='logo-block'>
-            <h5>We have sent an email to you for verification. Follow the link provided to finalize the signup process. If you do not see the verification email in your main inbox, check your spam folder. Please contact us if you do not receive the verification email within a few minutes.</h5>
+        <div class="logo-block">
+            {% if email %}
+                <h5>Confirmation email sent to {{ email }}.</h5>
+            {% endif %}
+            <h5>
+                We have sent an email to you for verification. Follow the link provided to finalize the signup process.
+                If you do not see the verification email in your main inbox, check your spam folder.
+                Please contact us if you do not receive the verification email within a few minutes.
+            </h5>
             <a href="{% url 'home' %}" class="btn btn-outline-success">View Products</a>
         </div>
     </div>
 {% endblock content %}
+

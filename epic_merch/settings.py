@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+import sys
 
 if os.path.exists("env.py"):
     import env  # Load environment variables
@@ -23,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY")
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'epic-merch-565735eb773a.herokuapp.com',
@@ -104,7 +105,11 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
-CSRF_TRUSTED_ORIGINS = ['https://epic-merch-565735eb773a.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = [
+    'https://epic-merch-565735eb773a.herokuapp.com',
+    'http://localhost',
+    'http://127.0.0.1',
+]
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
@@ -225,7 +230,7 @@ STRIPE_PUBLIC_KEY = os.getenv("STRIPE_PUBLIC_KEY")
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
 STRIPE_WH_SECRET = os.getenv("STRIPE_WH_SECRET")
 
-if 'DEVELOPMENT' in os.environ:
+if os.environ.get('DEVELOPMENT') == '1':
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'nazartsuper0309@gmail.com'
 else:
@@ -236,3 +241,4 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+    
