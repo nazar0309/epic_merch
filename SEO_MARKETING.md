@@ -7,11 +7,8 @@
 ### [Keyword Research](#keyword-research)
 ### [SEO Improvements](#seo-improvements)
 ### [Content Marketing Strategy](#content-marketing-strategy)
-### [Backlinking Strategy](#backlinking-strategy)
 ### [Social Media Marketing](#social-media-marketing)
-### [Influencer Partnerships](#influencer-partnerships)
-### [Tracking & Analytics](#tracking--analytics)
-### [Performance Optimization](#performance-optimization)
+
 
 - - -
 
@@ -126,6 +123,11 @@
 These keywords help us **rank higher in search results** and **attract more gamers** to our store.
 
 - - -
+## Social Media Marketing
+
+  An Epic Merch Facebook page for digital marketing. 
+  ![Facebook Link](/media/readme/facebook.png)
+
 
 ## SEO Improvements
 
